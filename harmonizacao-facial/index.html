@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harmonização Facial · ANI-HU · Dr. Nilmar Bispo</title>
+  <meta name="description" content="Harmonização facial com Dr. Nilmar Bispo: botox, preenchimento labial, rinomodelação, bichectomia e muito mais. Resultados naturais em São Paulo.">
+  <meta name="keywords" content="harmonização facial São Paulo, botox, preenchimento labial, rinomodelação, Dr Nilmar Bispo">
+  <script src="/nav.js" defer></script>
+  <style>
+    :root {
+      --navy: #071022; --navy2: #0d1a35; --gold: #C9A84C;
+      --gold-light: #e8c97a; --white: #fff; --gray: #8a9ab5; --text: #d4dbe8;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background: var(--navy); color: var(--text); font-family: 'Inter', sans-serif; }
+
+    /* PAGE HERO */
+    .page-hero {
+      min-height: 60vh;
+      background: linear-gradient(135deg, #040d1c 0%, #071022 60%, #0d1a35 100%);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding: 100px 40px 80px;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 80% at 80% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
+    }
+    .page-hero-inner { max-width: 800px; margin: 0 auto; text-align: center; position: relative; }
+    .page-eyebrow { font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .page-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; line-height: 1.05;
+      color: var(--white); margin-bottom: 20px;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .page-hero-sub { font-size: 1.05rem; color: var(--gray); line-height: 1.7; margin-bottom: 36px; }
+    .page-hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary { background: var(--gold); color: var(--navy); padding: 14px 28px; border-radius: 2px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; }
+    .btn-primary:hover { background: var(--gold-light); }
+    .btn-outline { border: 1px solid rgba(201,168,76,0.4); color: var(--gold); padding: 14px 28px; border-radius: 2px; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; }
+    .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+
+    /* INTRO */
+    .intro { padding: 90px 40px; }
+    .intro-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .intro-photo {
+      aspect-ratio: 4/5;
+      background: linear-gradient(160deg, #0d1a35, #131f3a);
+      border: 1px solid rgba(201,168,76,0.2); border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; color: var(--gray); text-align: center; padding: 40px;
+    }
+    .intro-content .eyebrow { font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .intro-content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; color: var(--white); margin-bottom: 20px; line-height: 1.2; }
+    .intro-content p { color: var(--gray); font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .intro-highlight { background: rgba(201,168,76,0.06); border-left: 2px solid var(--gold); padding: 16px 20px; margin: 24px 0; font-size: 0.9rem; color: var(--text); line-height: 1.7; font-style: italic; }
+
+    /* PROCEDURES */
+    .procedures { background: var(--navy2); padding: 90px 40px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-eyebrow { font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--white); margin-bottom: 16px; }
+    .section-sub { color: var(--gray); font-size: 1rem; line-height: 1.7; max-width: 560px; margin-bottom: 60px; }
+
+    .proc-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+    .proc-item {
+      background: var(--navy); padding: 40px 36px;
+      border-bottom: 1px solid rgba(201,168,76,0.08);
+      position: relative;
+    }
+    .proc-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: transparent; transition: background 0.3s; }
+    .proc-item:hover::before { background: var(--gold); }
+    .proc-icon { font-size: 1.8rem; margin-bottom: 16px; opacity: 0.7; }
+    .proc-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--white); margin-bottom: 12px; }
+    .proc-item p { font-size: 0.87rem; color: var(--gray); line-height: 1.7; margin-bottom: 16px; }
+    .proc-tag { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+
+    /* FAQ */
+    .faq-section { padding: 90px 40px; }
+    .faq-list { margin-top: 48px; }
+    .faq-item { border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .faq-q {
+      width: 100%; background: none; border: none; text-align: left;
+      padding: 24px 0; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--white);
+    }
+    .faq-q .icon { color: var(--gold); font-size: 1.4rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-q.open .icon { transform: rotate(45deg); }
+    .faq-a { display: none; padding: 0 0 24px; font-size: 0.92rem; color: var(--gray); line-height: 1.8; max-width: 760px; }
+    .faq-a.open { display: block; }
+
+    /* CTA */
+    .cta-banner { background: linear-gradient(135deg, #0d1a35 0%, #071022 100%); border-top: 1px solid rgba(201,168,76,0.2); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 80px 40px; text-align: center; }
+    .cta-banner h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; color: var(--white); margin-bottom: 16px; }
+    .cta-banner h2 em { color: var(--gold); font-style: italic; }
+    .cta-banner p { color: var(--gray); margin-bottom: 36px; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 768px) {
+      .intro-inner { grid-template-columns: 1fr; gap: 40px; }
+      .proc-list { grid-template-columns: 1fr; }
+      .page-hero, .intro, .procedures, .faq-section { padding: 64px 20px; }
+      .cta-banner { padding: 64px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-eyebrow">Dr. Nilmar Bispo · Estética Avançada</p>
+      <h1>Harmonização<br><em>Facial</em></h1>
+      <p class="page-hero-sub">Realce sua beleza natural com procedimentos de alta precisão. Resultados sofisticados que respeitam a sua individualidade.</p>
+      <div class="page-hero-actions">
+        <a href="https://wa.me/5511966504825?text=Olá!+Tenho+interesse+em+harmonização+facial.+Gostaria+de+agendar+uma+avaliação." target="_blank" class="btn-primary">Agendar Avaliação Gratuita</a>
+        <a href="#procedimentos" class="btn-outline">Ver Procedimentos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-inner">
+      <div class="intro-photo">
+        <!-- Substitua por: <img src="../img/facial-intro.jpg" alt="Harmonização Facial" style="width:100%;height:100%;object-fit:cover;border-radius:4px"> -->
+        <div style="font-size:2rem;opacity:0.3">📷</div>
+        <p style="font-size:0.75rem;opacity:0.4;margin-top:10px;letter-spacing:0.08em">Foto de harmonização<br>(inserir aqui)</p>
+      </div>
+      <div class="intro-content">
+        <p class="eyebrow">O que é</p>
+        <h2>Beleza que emana<br>de dentro para fora</h2>
+        <p>A harmonização facial é um conjunto de procedimentos minimamente invasivos que trabalham em sinergia para equilibrar as proporções do rosto, realçar os traços naturais e restaurar a vitalidade da pele.</p>
+        <p>Diferente de uma abordagem cirúrgica, os procedimentos utilizados pelo Dr. Nilmar Bispo são precisos, seguros e com recuperação rápida — permitindo que você volte à sua rotina em pouco tempo, com um resultado que parece natural.</p>
+        <div class="intro-highlight">
+          "A beleza ideal não é a que transforma o rosto em outro — é aquela que revela a melhor versão de quem você já é." — Dr. Nilmar Bispo
+        </div>
+        <a href="https://wa.me/5511966504825?text=Olá!+Gostaria+de+saber+mais+sobre+harmonização+facial." target="_blank" class="btn-primary" style="margin-top:8px">Tirar Dúvidas pelo WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCEDIMENTOS -->
+  <section class="procedures" id="procedimentos">
+    <div class="section-inner">
+      <p class="section-eyebrow">Procedimentos disponíveis</p>
+      <h2 class="section-title">O que realizamos</h2>
+      <p class="section-sub">Cada procedimento é indicado após avaliação personalizada. O Dr. Nilmar monta o protocolo ideal para o seu rosto.</p>
+
+      <div class="proc-list">
+        <div class="proc-item">
+          <div class="proc-icon">💉</div>
+          <h3>Toxina Botulínica (Botox)</h3>
+          <p>Suaviza linhas de expressão na testa, entre as sobrancelhas e ao redor dos olhos. Resultado natural, sem aspecto "congelado". Efeito dura de 4 a 6 meses.</p>
+          <span class="proc-tag">Sem cortes · Resultado em 7-14 dias</span>
+        </div>
+        <div class="proc-item">
+          <div class="proc-icon">✨</div>
+          <h3>Preenchimento Labial</h3>
+          <p>Ácido hialurônico para volumizar, definir contornos e hidratar os lábios. Técnica personalizada para cada formato de boca, respeitando a harmonia facial.</p>
+          <span class="proc-tag">Ácido Hialurônico · Resultado imediato</span>
+        </div>
+        <div class="proc-item">
+          <div class="proc-icon">👃</div>
+          <h3>Rinomodelação</h3>
+          <p>Correção de irregularidades no nariz sem cirurgia. Com ácido hialurônico, é possível elevar a ponta, suavizar dorso e melhorar simetrias em uma única sessão.</p>
+          <span class="proc-tag">Sem cirurgia · Rápido retorno</span>
+        </div>
+        <div class="proc-item">
+          <div class="proc-icon">🌟</div>
+          <h3>Preenchimento de Olheiras</h3>
+          <p>Tratamento do sulco nasojugal com ácido hialurônico, devolvendo frescor e luminosidade ao olhar. Resultado sutil e rejuvenescedor.</p>
+          <span class="proc-tag">Alta precisão · Sem downtime</span>
+        </div>
+        <div class="proc-item">
+          <div class="proc-icon">📐</div>
+          <h3>Contorno Facial (Mandíbula e Malar)</h3>
+          <p>Definição e projeção de maçãs do rosto e mandíbula com ácido hialurônico ou bioestimuladores, para um aspecto mais estruturado e juvenil.</p>
+          <span class="proc-tag">Estruturação facial · Alta definição</span>
+        </div>
+        <div class="proc-item">
+          <div class="proc-icon">🔬</div>
+          <h3>Bioestimuladores de Colágeno</h3>
+          <p>Sculptra, Radiesse ou Ellansé para estimular a produção natural de colágeno, melhorando flacidez, textura e volume facial de forma gradual e duradoura.</p>
+          <span class="proc-tag">Resultado progressivo · Longa duração</span>
+        </div>
+        <div class="proc-item">
+          <div class="proc-icon">💫</div>
+          <h3>Fios de PDO (Sustentação Facial)</h3>
+          <p>Fios absorvíveis que promovem sustentação imediata e estimulam colágeno. Ideal para flacidez de bochechas, papada e pescoço.</p>
+          <span class="proc-tag">Lifting sem cirurgia · 45 minutos</span>
+        </div>
+        <div class="proc-item">
+          <div class="proc-icon">🌿</div>
+          <h3>Skinbooster e Hidratação Profunda</h3>
+          <p>Microinjeções de ácido hialurônico ultra-hidratante para restaurar o brilho, textura e a saúde da pele de dentro para fora.</p>
+          <span class="proc-tag">Pele luminosa · 3 sessões recomendadas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="section-inner">
+      <p class="section-eyebrow">Dúvidas frequentes</p>
+      <h2 class="section-title">Perguntas sobre<br>Harmonização Facial</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Os procedimentos ficam com aspecto natural? <span class="icon">+</span>
+          </button>
+          <div class="faq-a">Sim. O objetivo do Dr. Nilmar é sempre realçar a beleza natural. Os procedimentos são planejados em conjunto com o paciente para respeitar as proporções do rosto e nunca produzir um resultado artificial ou exagerado.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Quanto tempo duram os resultados? <span class="icon">+</span>
+          </button>
+          <div class="faq-a">Depende do procedimento. Botox dura de 4 a 6 meses; preenchedores de ácido hialurônico de 12 a 18 meses; bioestimuladores podem durar 2 anos ou mais. Na consulta, o Dr. Nilmar explica detalhadamente cada protocolo.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Os procedimentos doem? <span class="icon">+</span>
+          </button>
+          <div class="faq-a">A maioria dos procedimentos é realizada com anestesia tópica (creme anestesiante) e/ou produto com lidocaína. O desconforto é mínimo. Algumas pessoas sentem uma leve pressão durante a aplicação, mas nada que cause dor intensa.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Preciso de tempo de recuperação? <span class="icon">+</span>
+          </button>
+          <div class="faq-a">A maioria dos procedimentos não exige afastamento. Pode haver pequenas marcas ou hematomas passageiros, que geralmente desaparecem em 3 a 7 dias. O Dr. Nilmar orienta todos os cuidados pós-procedimento na consulta.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Como funciona a primeira consulta? <span class="icon">+</span>
+          </button>
+          <div class="faq-a">A avaliação é gratuita e consiste em uma análise completa do rosto, escuta das queixas e objetivos do paciente, e apresentação de um protocolo personalizado. Não há compromisso de realizar o procedimento na mesma data.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Agende sua <em>avaliação gratuita</em></h2>
+    <p>O Dr. Nilmar vai analisar seu rosto e montar o protocolo ideal para você — sem compromisso.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/5511966504825?text=Olá!+Tenho+interesse+em+harmonização+facial.+Gostaria+de+agendar+uma+avaliação+gratuita." target="_blank" class="btn-primary">Agendar pelo WhatsApp</a>
+      <a href="https://wa.me/5511966504825?text=Olá!+Quero+saber+os+valores+dos+procedimentos+de+harmonização+facial." target="_blank" class="btn-outline">Consultar Valores</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+      document.querySelectorAll('.faq-q.open').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+      if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+    }
+  </script>
+</body>
+</html>

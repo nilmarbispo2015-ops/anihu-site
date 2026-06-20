@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harmonização Corporal · ANI-HU · Dr. Nilmar Bispo</title>
+  <meta name="description" content="Harmonização corporal com Dr. Nilmar Bispo: bioestimuladores, fios de PDO, celulite, flacidez corporal. Tratamentos sem cirurgia em São Paulo.">
+  <meta name="keywords" content="harmonização corporal São Paulo, bioestimulador corporal, tratamento celulite, fios PDO, Dr Nilmar Bispo">
+  <script src="/nav.js" defer></script>
+  <style>
+    :root { --navy:#071022;--navy2:#0d1a35;--gold:#C9A84C;--gold-light:#e8c97a;--white:#fff;--gray:#8a9ab5;--text:#d4dbe8; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--navy);color:var(--text);font-family:'Inter',sans-serif}
+
+    .page-hero{min-height:60vh;background:linear-gradient(135deg,#040d1c 0%,#071022 60%,#0d1a35 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 40px 80px}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 50%,rgba(201,168,76,0.07) 0%,transparent 70%)}
+    .page-hero-inner{max-width:800px;margin:0 auto;text-align:center;position:relative}
+    .page-eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+    .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:20px}
+    .page-hero h1 em{font-style:italic;color:var(--gold)}
+    .page-hero-sub{font-size:1.05rem;color:var(--gray);line-height:1.7;margin-bottom:36px}
+    .page-hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+    .btn-primary{background:var(--gold);color:var(--navy);padding:14px 28px;border-radius:2px;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .25s}
+    .btn-primary:hover{background:var(--gold-light)}
+    .btn-outline{border:1px solid rgba(201,168,76,.4);color:var(--gold);padding:14px 28px;border-radius:2px;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .25s}
+    .btn-outline:hover{border-color:var(--gold);background:rgba(201,168,76,.05)}
+
+    .section{padding:90px 40px}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .section-eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--white);margin-bottom:16px}
+    .section-sub{color:var(--gray);font-size:1rem;line-height:1.7;max-width:560px;margin-bottom:60px}
+
+    /* BENEFITS */
+    .benefits{background:var(--navy2);padding:90px 40px}
+    .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+    .benefit-card{background:var(--navy);border:1px solid rgba(201,168,76,.1);padding:36px 28px;border-radius:2px;transition:border-color .3s}
+    .benefit-card:hover{border-color:rgba(201,168,76,.4)}
+    .benefit-icon{font-size:2rem;margin-bottom:16px}
+    .benefit-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white);margin-bottom:10px}
+    .benefit-card p{font-size:.85rem;color:var(--gray);line-height:1.7}
+
+    /* PROCEDURES */
+    .proc-accordion{margin-top:48px}
+    .proc-acc-item{border-bottom:1px solid rgba(201,168,76,.1)}
+    .proc-acc-q{width:100%;background:none;border:none;text-align:left;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .proc-acc-title{display:flex;align-items:center;gap:16px}
+    .proc-acc-icon-num{width:40px;height:40px;border:1px solid rgba(201,168,76,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--gold);flex-shrink:0}
+    .proc-acc-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white)}
+    .proc-acc-tag{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+    .proc-acc-chevron{color:var(--gold);font-size:1.2rem;transition:transform .3s;flex-shrink:0}
+    .proc-acc-q.open .proc-acc-chevron{transform:rotate(45deg)}
+    .proc-acc-body{display:none;padding:0 0 32px 56px}
+    .proc-acc-body.open{display:block}
+    .proc-acc-body p{font-size:.9rem;color:var(--gray);line-height:1.85;margin-bottom:12px}
+    .proc-acc-body ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .proc-acc-body ul li{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.15);padding:5px 12px;border-radius:2px}
+
+    /* COMPARISON */
+    .compare-table{width:100%;border-collapse:collapse;margin-top:48px}
+    .compare-table th{background:var(--gold);color:var(--navy);padding:16px 20px;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;text-align:left}
+    .compare-table td{padding:16px 20px;font-size:.88rem;color:var(--text);border-bottom:1px solid rgba(201,168,76,.08)}
+    .compare-table tr:nth-child(even) td{background:rgba(201,168,76,.03)}
+    .compare-table .check{color:var(--gold)}
+    .compare-table .x{color:rgba(255,255,255,.3)}
+
+    .cta-banner{background:linear-gradient(135deg,#0d1a35 0%,#071022 100%);border-top:1px solid rgba(201,168,76,.2);border-bottom:1px solid rgba(201,168,76,.2);padding:80px 40px;text-align:center}
+    .cta-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:var(--white);margin-bottom:16px}
+    .cta-banner h2 em{color:var(--gold);font-style:italic}
+    .cta-banner p{color:var(--gray);margin-bottom:36px}
+    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+    @media(max-width:768px){
+      .benefits-grid{grid-template-columns:1fr}
+      .page-hero,.section,.benefits,.cta-banner{padding:64px 20px}
+      .proc-acc-body{padding-left:20px}
+      .compare-table{font-size:.78rem}
+      .compare-table th,.compare-table td{padding:12px}
+    }
+  </style>
+</head>
+<body>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-eyebrow">Dr. Nilmar Bispo · Estética Avançada</p>
+      <h1>Harmonização<br><em>Corporal</em></h1>
+      <p class="page-hero-sub">Tratamentos não-invasivos para definição, contorno e rejuvenescimento do corpo. Sem cirurgia, com resultados reais.</p>
+      <div class="page-hero-actions">
+        <a href="https://wa.me/5511966504825?text=Olá!+Tenho+interesse+em+harmonização+corporal.+Gostaria+de+agendar+uma+avaliação." target="_blank" class="btn-primary">Agendar Avaliação Gratuita</a>
+        <a href="#procedimentos" class="btn-outline">Ver Procedimentos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits">
+    <div class="section-inner">
+      <p class="section-eyebrow">Por que escolher</p>
+      <h2 class="section-title">Resultados sem cirurgia</h2>
+      <p class="section-sub">A harmonização corporal moderna permite tratar gordura localizada, flacidez e celulite com tecnologias minimamente invasivas.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>Rápida Recuperação</h3>
+          <p>Sem internação, sem cortes. A maioria dos procedimentos permite retorno imediato às atividades do dia a dia.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎯</div>
+          <h3>Alta Precisão</h3>
+          <p>Tecnologias de última geração que atuam exatamente onde você precisa, com segurança e controle total do resultado.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>Resultados Progressivos</h3>
+          <p>Melhora contínua ao longo das semanas, com resultado final que parece natural e harmonioso com o seu corpo.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>Protocolos Seguros</h3>
+          <p>Todos os procedimentos são realizados pelo Dr. Nilmar com produtos certificados pela ANVISA e técnicas validadas.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💎</div>
+          <h3>Experiência Personalizada</h3>
+          <p>Plano de tratamento montado especificamente para o seu corpo, objetivos e estilo de vida.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌿</div>
+          <h3>Resultado Natural</h3>
+          <p>O objetivo é sempre realçar o melhor do seu corpo, nunca transformá-lo em algo diferente do que você é.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCEDURES -->
+  <section class="section" id="procedimentos">
+    <div class="section-inner">
+      <p class="section-eyebrow">Procedimentos disponíveis</p>
+      <h2 class="section-title">Tratamentos corporais</h2>
+      <p class="section-sub">Conheça os principais procedimentos oferecidos. O Dr. Nilmar avalia e recomenda o protocolo ideal na sua consulta.</p>
+
+      <div class="proc-accordion">
+        <div class="proc-acc-item">
+          <button class="proc-acc-q" onclick="toggleAcc(this)">
+            <div class="proc-acc-title">
+              <span class="proc-acc-icon-num">01</span>
+              <div>
+                <div class="proc-acc-name">Bioestimuladores de Colágeno Corporal</div>
+                <div class="proc-acc-tag">Sculptra · Radiesse · Ellansé</div>
+              </div>
+            </div>
+            <span class="proc-acc-chevron">+</span>
+          </button>
+          <div class="proc-acc-body">
+            <p>Os bioestimuladores de colágeno são injetados diretamente na área a ser tratada e estimulam a produção natural de colágeno ao longo dos meses. São utilizados para tratar flacidez corporal, melhorar a textura da pele e promover um aspecto mais firme e jovem.</p>
+            <p>As principais áreas tratadas incluem braços, abdômen, glúteos, coxas e joelhos. O resultado é progressivo e pode durar de 2 a 3 anos.</p>
+            <ul><li>Sem cirurgia</li><li>Resultado duradouro</li><li>Estimula colágeno natural</li><li>1 a 3 sessões</li></ul>
+          </div>
+        </div>
+        <div class="proc-acc-item">
+          <button class="proc-acc-q" onclick="toggleAcc(this)">
+            <div class="proc-acc-title">
+              <span class="proc-acc-icon-num">02</span>
+              <div>
+                <div class="proc-acc-name">Fios de PDO Corporais</div>
+                <div class="proc-acc-tag">Sustentação · Lifting · Celulite</div>
+              </div>
+            </div>
+            <span class="proc-acc-chevron">+</span>
+          </button>
+          <div class="proc-acc-body">
+            <p>Os fios de polidioxanona (PDO) são inseridos sob a pele para promover efeito de sustentação imediato e estimular colágeno. No corpo, são utilizados especialmente para tratar flacidez de braços, barriga, glúteos e coxas, além do tratamento da celulite.</p>
+            <ul><li>Lifting sem bisturi</li><li>Resultados em 30 dias</li><li>Fios biodegradáveis</li><li>45 a 60 minutos</li></ul>
+          </div>
+        </div>
+        <div class="proc-acc-item">
+          <button class="proc-acc-q" onclick="toggleAcc(this)">
+            <div class="proc-acc-title">
+              <span class="proc-acc-icon-num">03</span>
+              <div>
+                <div class="proc-acc-name">Tratamento de Celulite</div>
+                <div class="proc-acc-tag">QWO · Mesoterapia · PDO</div>
+              </div>
+            </div>
+            <span class="proc-acc-chevron">+</span>
+          </button>
+          <div class="proc-acc-body">
+            <p>Combinação de técnicas injetáveis e fios para reduzir o aspecto de casca de laranja, especialmente em coxas e glúteos. O protocolo combina o tratamento das fibras responsáveis pela celulite com a estimulação de colágeno na região.</p>
+            <ul><li>Eficaz em todos os graus</li><li>Protocolo combinado</li><li>Resultados progressivos</li><li>Sem cicatrizes</li></ul>
+          </div>
+        </div>
+        <div class="proc-acc-item">
+          <button class="proc-acc-q" onclick="toggleAcc(this)">
+            <div class="proc-acc-title">
+              <span class="proc-acc-icon-num">04</span>
+              <div>
+                <div class="proc-acc-name">Endolaser Corporal</div>
+                <div class="proc-acc-tag">Gordura localizada · Contorno</div>
+              </div>
+            </div>
+            <span class="proc-acc-chevron">+</span>
+          </button>
+          <div class="proc-acc-body">
+            <p>Procedimento exclusivo que combina tecnologia laser com miniincisões milimétricos para remover gordura localizada com altíssima precisão. O Dr. Nilmar é especialista na técnica e um dos pioneiros no ABC Paulista. Resultados visíveis desde a 1ª sessão.</p>
+            <ul><li>Redução de gordura</li><li>Contorno preciso</li><li>1ª sessão com resultado</li><li>Alta rápida</li></ul>
+          </div>
+        </div>
+        <div class="proc-acc-item">
+          <button class="proc-acc-q" onclick="toggleAcc(this)">
+            <div class="proc-acc-title">
+              <span class="proc-acc-icon-num">05</span>
+              <div>
+                <div class="proc-acc-name">Preenchimento Corporal</div>
+                <div class="proc-acc-tag">Glúteos · Bumbum · Volumização</div>
+              </div>
+            </div>
+            <span class="proc-acc-chevron">+</span>
+          </button>
+          <div class="proc-acc-body">
+            <p>Utilização de ácido hialurônico de alta densidade ou bioestimuladores para volumizar e modelar glúteos, correção de assimetrias e projeção do contorno. Alternativa não-cirúrgica ao implante de silicone.</p>
+            <ul><li>Sem prótese</li><li>Resultado natural</li><li>Alta em 2h</li><li>Protocolo personalizado</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="section" style="padding-top:0">
+    <div class="section-inner">
+      <p class="section-eyebrow">Por que não-invasivo</p>
+      <h2 class="section-title">Tratamento vs. Cirurgia</h2>
+      <p class="section-sub">Veja as vantagens dos procedimentos minimamente invasivos em comparação às alternativas cirúrgicas.</p>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Harmonização Corporal ANI-HU</th>
+            <th>Cirurgia Tradicional</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Anestesia</td><td><span class="check">✓</span> Local ou tópica</td><td>Geral ou peridural</td></tr>
+          <tr><td>Internação</td><td><span class="check">✓</span> Não necessária</td><td>1 a 3 dias</td></tr>
+          <tr><td>Cicatrizes</td><td><span class="check">✓</span> Ausentes ou mínimas</td><td>Presentes</td></tr>
+          <tr><td>Retorno às atividades</td><td><span class="check">✓</span> Imediato a 7 dias</td><td>15 a 45 dias</td></tr>
+          <tr><td>Riscos</td><td><span class="check">✓</span> Muito baixos</td><td>Moderados a altos</td></tr>
+          <tr><td>Custo</td><td><span class="check">✓</span> Acessível</td><td>Alto</td></tr>
+          <tr><td>Resultado</td><td><span class="check">✓</span> Natural e progressivo</td><td>Imediato, pode ser artificial</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <h2>Cuide do seu corpo com <em>precisão</em></h2>
+    <p>Agende sua avaliação gratuita e descubra o protocolo personalizado para você.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/5511966504825?text=Olá!+Tenho+interesse+em+harmonização+corporal.+Gostaria+de+agendar+uma+avaliação+gratuita." target="_blank" class="btn-primary">Agendar pelo WhatsApp</a>
+      <a href="https://wa.me/5511966504825?text=Olá!+Quero+saber+os+valores+dos+procedimentos+corporais." target="_blank" class="btn-outline">Consultar Valores</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleAcc(btn){
+      const body=btn.nextElementSibling;const isOpen=btn.classList.contains('open');
+      document.querySelectorAll('.proc-acc-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});
+      if(!isOpen){btn.classList.add('open');body.classList.add('open');}
+    }
+  </script>
+</body>
+</html>

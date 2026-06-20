@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog · ANI-HU · Dr. Nilmar Bispo — Estética e Saúde</title>
+  <meta name="description" content="Artigos sobre estética avançada, harmonização facial, corporal e Endolaser. Conteúdo especializado pelo Dr. Nilmar Bispo.">
+  <meta name="keywords" content="blog estética, harmonização facial dicas, endolaser o que é, Dr Nilmar Bispo artigos">
+  <script src="/nav.js" defer></script>
+  <style>
+    :root{--navy:#071022;--navy2:#0d1a35;--gold:#C9A84C;--gold-light:#e8c97a;--white:#fff;--gray:#8a9ab5;--text:#d4dbe8}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--navy);color:var(--text);font-family:'Inter',sans-serif}
+
+    .page-hero{padding:120px 40px 80px;text-align:center;background:linear-gradient(135deg,#040d1c 0%,#071022 100%);position:relative}
+    .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.3),transparent)}
+    .page-eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:var(--white);margin-bottom:16px}
+    .page-hero h1 em{font-style:italic;color:var(--gold)}
+    .page-hero p{color:var(--gray);font-size:1rem;max-width:560px;margin:0 auto;line-height:1.7}
+
+    /* FILTER TABS */
+    .filter-bar{padding:48px 40px 0;max-width:1100px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap}
+    .filter-btn{background:none;border:1px solid rgba(201,168,76,.2);color:var(--gray);padding:8px 20px;border-radius:2px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s}
+    .filter-btn.active,.filter-btn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+
+    /* BLOG GRID */
+    .blog-section{padding:48px 40px 100px}
+    .blog-inner{max-width:1100px;margin:0 auto}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:0}
+
+    .blog-card{background:var(--navy2);border:1px solid rgba(201,168,76,.1);border-radius:4px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .3s,border-color .3s}
+    .blog-card:hover{transform:translateY(-6px);border-color:rgba(201,168,76,.4)}
+
+    .blog-card-img{height:200px;background:linear-gradient(135deg,#0d1a35,#131f3a);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:.72rem;letter-spacing:.08em;position:relative;overflow:hidden}
+    .blog-card-img .cat-badge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--navy);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;font-weight:600}
+
+    .blog-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
+    .blog-meta{font-size:.72rem;color:var(--gray);letter-spacing:.05em;margin-bottom:10px}
+    .blog-card h2{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--white);line-height:1.3;margin-bottom:10px}
+    .blog-card p{font-size:.83rem;color:var(--gray);line-height:1.65;flex:1}
+    .blog-read{margin-top:20px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:6px}
+    .blog-read::after{content:'→';transition:transform .2s}
+    .blog-card:hover .blog-read::after{transform:translateX(4px)}
+
+    /* FEATURED POST */
+    .blog-featured{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;gap:0;min-height:320px}
+    .blog-featured .blog-card-img{height:auto}
+    .blog-featured h2{font-size:1.8rem}
+
+    /* PAGINATION */
+    .pagination{display:flex;justify-content:center;gap:8px;margin-top:60px}
+    .page-btn{width:40px;height:40px;border:1px solid rgba(201,168,76,.2);background:none;color:var(--gray);border-radius:2px;cursor:pointer;transition:all .25s;font-size:.85rem}
+    .page-btn.active,.page-btn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+
+    /* NEWSLETTER */
+    .newsletter{background:var(--navy2);border-top:1px solid rgba(201,168,76,.15);border-bottom:1px solid rgba(201,168,76,.15);padding:80px 40px;text-align:center}
+    .newsletter h2{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--white);margin-bottom:12px}
+    .newsletter p{color:var(--gray);margin-bottom:32px}
+    .newsletter-form{display:flex;gap:0;max-width:480px;margin:0 auto}
+    .newsletter-form input{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.2);border-right:none;color:var(--white);padding:14px 20px;font-size:.9rem;outline:none;border-radius:2px 0 0 2px}
+    .newsletter-form input::placeholder{color:var(--gray)}
+    .newsletter-form input:focus{border-color:var(--gold)}
+    .newsletter-form button{background:var(--gold);color:var(--navy);border:none;padding:14px 24px;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border-radius:0 2px 2px 0;white-space:nowrap;transition:background .25s}
+    .newsletter-form button:hover{background:var(--gold-light)}
+    .newsletter-note{font-size:.72rem;color:var(--gray);margin-top:12px}
+
+    @media(max-width:900px){
+      .blog-grid{grid-template-columns:1fr}
+      .blog-featured{grid-column:auto;grid-template-columns:1fr;min-height:auto}
+      .blog-featured .blog-card-img{height:200px}
+      .blog-section,.newsletter{padding:64px 20px}
+      .filter-bar{padding:32px 20px 0}
+      .page-hero{padding:100px 20px 60px}
+      .newsletter-form{flex-direction:column}
+      .newsletter-form input,.newsletter-form button{border-radius:2px;border-right:1px solid rgba(201,168,76,.2)}
+    }
+  </style>
+</head>
+<body>
+
+  <section class="page-hero">
+    <p class="page-eyebrow">Conhecimento & Estética</p>
+    <h1>Blog <em>ANI-HU</em></h1>
+    <p>Artigos especializados sobre procedimentos estéticos, dicas de cuidados e tudo que você precisa saber para tomar decisões com segurança.</p>
+  </section>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterPosts('todos', this)">Todos</button>
+    <button class="filter-btn" onclick="filterPosts('facial', this)">Harmonização Facial</button>
+    <button class="filter-btn" onclick="filterPosts('corporal', this)">Harmonização Corporal</button>
+    <button class="filter-btn" onclick="filterPosts('endolaser', this)">Endolaser</button>
+    <button class="filter-btn" onclick="filterPosts('cuidados', this)">Cuidados & Dicas</button>
+  </div>
+
+  <section class="blog-section">
+    <div class="blog-inner">
+      <div class="blog-grid" id="blog-grid">
+
+        <!-- FEATURED -->
+        <a href="/blog/endolaser-o-que-e" class="blog-card blog-featured" data-cat="endolaser">
+          <div class="blog-card-img">
+            <span class="cat-badge">Endolaser</span>
+            <!-- <img src="img/blog-endolaser.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+            📷 Imagem do post
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-meta">Dr. Nilmar Bispo · 15 Jun 2026 · 8 min de leitura</p>
+            <h2>O que é o Endolaser e por que é considerado revolução no contorno corporal?</h2>
+            <p>Conheça a tecnologia que combina laser de alta precisão com microincisões para eliminar gordura localizada sem cirurgia tradicional — e entenda por que o Dr. Nilmar foi pioneiro na técnica no ABC Paulista.</p>
+            <span class="blog-read">Ler artigo completo</span>
+          </div>
+        </a>
+
+        <!-- POST 2 -->
+        <a href="/blog/harmonizacao-facial-guia" class="blog-card" data-cat="facial">
+          <div class="blog-card-img">
+            <span class="cat-badge">Facial</span>
+            📷
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-meta">Dr. Nilmar Bispo · 10 Jun 2026 · 6 min</p>
+            <h2>Guia completo: quais procedimentos de harmonização facial existem?</h2>
+            <p>Botox, preenchimento, rinomodelação, bioestimuladores — saiba a diferença entre cada um e qual é indicado para você.</p>
+            <span class="blog-read">Ler artigo</span>
+          </div>
+        </a>
+
+        <!-- POST 3 -->
+        <a href="/blog/cuidados-pos-procedimento" class="blog-card" data-cat="cuidados">
+          <div class="blog-card-img">
+            <span class="cat-badge">Cuidados</span>
+            📷
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-meta">Dr. Nilmar Bispo · 5 Jun 2026 · 5 min</p>
+            <h2>Cuidados essenciais após procedimento estético: o que fazer e o que evitar</h2>
+            <p>Saiba como garantir o melhor resultado possível no pós-procedimento e acelerar a recuperação com segurança.</p>
+            <span class="blog-read">Ler artigo</span>
+          </div>
+        </a>
+
+        <!-- POST 4 -->
+        <a href="/blog/bioestimuladores-colageno" class="blog-card" data-cat="facial corporal">
+          <div class="blog-card-img">
+            <span class="cat-badge">Colágeno</span>
+            📷
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-meta">Dr. Nilmar Bispo · 28 Mai 2026 · 7 min</p>
+            <h2>Bioestimuladores de colágeno: Sculptra, Radiesse ou Ellansé — qual escolher?</h2>
+            <p>Um comparativo completo entre os principais bioestimuladores do mercado e como o Dr. Nilmar indica cada um.</p>
+            <span class="blog-read">Ler artigo</span>
+          </div>
+        </a>
+
+        <!-- POST 5 -->
+        <a href="/blog/botox-mitos-verdades" class="blog-card" data-cat="facial">
+          <div class="blog-card-img">
+            <span class="cat-badge">Facial</span>
+            📷
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-meta">Dr. Nilmar Bispo · 20 Mai 2026 · 5 min</p>
+            <h2>Botox: 7 mitos e verdades que você precisa saber antes de fazer</h2>
+            <p>Desmistificando os maiores medos sobre a toxina botulínica e como ela age no organismo com segurança.</p>
+            <span class="blog-read">Ler artigo</span>
+          </div>
+        </a>
+
+        <!-- POST 6 -->
+        <a href="/blog/celulite-tratamento" class="blog-card" data-cat="corporal">
+          <div class="blog-card-img">
+            <span class="cat-badge">Corporal</span>
+            📷
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-meta">Dr. Nilmar Bispo · 12 Mai 2026 · 6 min</p>
+            <h2>Tratamento de celulite: quais realmente funcionam em 2026?</h2>
+            <p>Do grau 1 ao grau 4, quais são as abordagens mais eficazes para cada tipo de celulite segundo a medicina estética moderna.</p>
+            <span class="blog-read">Ler artigo</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Receba conteúdo <em style="color:var(--gold);font-style:italic">exclusivo</em></h2>
+    <p>Dicas, novidades e artigos do Dr. Nilmar diretamente no seu e-mail. Sem spam.</p>
+    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+      <input type="email" placeholder="Seu melhor e-mail" required>
+      <button type="submit">Assinar</button>
+    </form>
+    <p class="newsletter-note">Ao assinar, você concorda em receber e-mails da clínica ANI-HU. Cancele quando quiser.</p>
+  </section>
+
+  <script>
+    function filterPosts(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.blog-card').forEach(card => {
+        if (cat === 'todos' || (card.dataset.cat && card.dataset.cat.includes(cat))) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    function handleNewsletter(e) {
+      e.preventDefault();
+      alert('Obrigado! Em breve você receberá nosso conteúdo. 💛');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

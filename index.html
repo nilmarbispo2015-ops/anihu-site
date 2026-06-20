@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANI-HU · Dr. Nilmar Bispo — Estética Avançada em São Paulo</title>
+  <meta name="description" content="Dr. Nilmar Bispo, especialista em estética avançada com mais de 16 anos de experiência. Harmonização facial, corporal e Endolaser em São Paulo.">
+  <meta name="keywords" content="Dr Nilmar Bispo, estética avançada, harmonização facial, harmonização corporal, endolaser, São Paulo">
+  <script src="/nav.js" defer></script>
+  <style>
+    :root {
+      --navy: #071022;
+      --navy2: #0d1a35;
+      --gold: #C9A84C;
+      --gold-light: #e8c97a;
+      --white: #ffffff;
+      --gray: #8a9ab5;
+      --text: #d4dbe8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--navy); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      background: linear-gradient(135deg, #040d1c 0%, #071022 50%, #0d1a35 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 70% at 70% 50%, rgba(201,168,76,0.07) 0%, transparent 70%);
+    }
+    .hero-grid {
+      max-width: 1200px; margin: 0 auto; padding: 80px 40px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      font-weight: 300; line-height: 1.1;
+      color: var(--white); margin-bottom: 24px;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: 1.05rem; line-height: 1.7; color: var(--gray);
+      margin-bottom: 40px; max-width: 480px;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--navy);
+      padding: 14px 28px; border-radius: 2px;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; transition: all 0.25s;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+    .btn-outline {
+      border: 1px solid rgba(201,168,76,0.4); color: var(--gold);
+      padding: 14px 28px; border-radius: 2px;
+      font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; transition: all 0.25s;
+    }
+    .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+
+    .hero-photo {
+      position: relative; display: flex; justify-content: center;
+    }
+    .hero-photo-placeholder {
+      width: 420px; height: 520px;
+      background: linear-gradient(160deg, #0d1a35 0%, #131f3a 100%);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 4px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: var(--gray); text-align: center; padding: 40px;
+      position: relative; overflow: hidden;
+    }
+    .hero-photo-placeholder::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .photo-icon { font-size: 3rem; margin-bottom: 16px; opacity: 0.3; }
+    .photo-label { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.5; }
+
+    /* Decorative line */
+    .hero-deco {
+      position: absolute; right: 0; top: 0; bottom: 0; width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(201,168,76,0.3), transparent);
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--gold);
+      padding: 24px 40px;
+    }
+    .stats-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 16px; text-align: center;
+    }
+    .stat-item { color: var(--navy); }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem; font-weight: 600; line-height: 1;
+      display: block;
+    }
+    .stat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; opacity: 0.8; }
+
+    /* ── PROCEDURES ── */
+    .section { padding: 100px 40px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300; color: var(--white); margin-bottom: 16px; line-height: 1.15;
+    }
+    .section-sub { color: var(--gray); font-size: 1rem; line-height: 1.7; max-width: 560px; margin-bottom: 60px; }
+
+    .procedures-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    }
+    .proc-card {
+      background: var(--navy2);
+      padding: 48px 36px;
+      text-decoration: none;
+      position: relative; overflow: hidden;
+      transition: background 0.3s;
+      display: block;
+    }
+    .proc-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--gold); transform: scaleX(0); transition: transform 0.35s;
+    }
+    .proc-card:hover { background: #0f1f3d; }
+    .proc-card:hover::before { transform: scaleX(1); }
+    .proc-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem; font-weight: 300; color: rgba(201,168,76,0.15);
+      line-height: 1; margin-bottom: 24px; display: block;
+    }
+    .proc-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 400; color: var(--white);
+      margin-bottom: 14px; line-height: 1.2;
+    }
+    .proc-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.7; margin-bottom: 28px; }
+    .proc-link {
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); display: inline-flex; align-items: center; gap: 8px;
+    }
+    .proc-link::after { content: '→'; transition: transform 0.2s; }
+    .proc-card:hover .proc-link::after { transform: translateX(4px); }
+
+    /* ── BIO ── */
+    .bio-section {
+      background: var(--navy2);
+      padding: 100px 40px;
+    }
+    .bio-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start;
+    }
+    .bio-photo-wrap { position: relative; }
+    .bio-photo {
+      width: 100%; aspect-ratio: 3/4;
+      background: linear-gradient(160deg, #131f3a 0%, #0d1a35 100%);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; color: var(--gray); text-align: center; padding: 40px;
+    }
+    .bio-photo-tag {
+      position: absolute; bottom: -16px; right: -16px;
+      background: var(--gold); color: var(--navy);
+      padding: 20px 24px; text-align: center;
+    }
+    .bio-photo-tag strong { display: block; font-size: 2rem; font-family: 'Cormorant Garamond', serif; line-height: 1; }
+    .bio-photo-tag span { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .bio-content .section-eyebrow { margin-bottom: 16px; }
+    .bio-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 300; color: var(--white); margin-bottom: 8px; line-height: 1.1;
+    }
+    .bio-content h2 em { color: var(--gold); font-style: italic; }
+    .bio-subtitle { font-size: 0.85rem; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 28px; }
+    .bio-text { color: var(--gray); font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+
+    .bio-credentials {
+      margin: 36px 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .credential {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.12);
+      padding: 16px 20px; border-radius: 2px;
+    }
+    .credential-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .credential-value { font-size: 0.9rem; color: var(--white); }
+
+    .bio-units { margin-top: 32px; }
+    .bio-units h4 { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .unit-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .unit-list li {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.9rem; color: var(--text);
+    }
+    .unit-list li::before { content: '◆'; color: var(--gold); font-size: 0.5rem; }
+
+    /* ── BLOG PREVIEW ── */
+    .blog-preview { padding: 100px 40px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .blog-card {
+      background: var(--navy2); border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 4px; overflow: hidden;
+      text-decoration: none; transition: border-color 0.3s, transform 0.3s;
+    }
+    .blog-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
+    .blog-card-img {
+      height: 180px;
+      background: linear-gradient(135deg, #0d1a35, #131f3a);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray); font-size: 0.75rem; letter-spacing: 0.1em;
+    }
+    .blog-card-body { padding: 24px; }
+    .blog-tag { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .blog-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--white); line-height: 1.3; margin-bottom: 10px; }
+    .blog-card p { font-size: 0.83rem; color: var(--gray); line-height: 1.6; }
+    .blog-read { margin-top: 16px; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase; }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, #0d1a35 0%, #071022 100%);
+      border-top: 1px solid rgba(201,168,76,0.2);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 80px 40px; text-align: center;
+    }
+    .cta-banner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300; color: var(--white); margin-bottom: 16px;
+    }
+    .cta-banner h2 em { color: var(--gold); font-style: italic; }
+    .cta-banner p { color: var(--gray); margin-bottom: 36px; font-size: 1rem; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .bio-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-photo { order: -1; }
+      .hero-photo-placeholder { width: 100%; height: 340px; }
+      .procedures-grid, .blog-grid { grid-template-columns: 1fr; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .bio-credentials { grid-template-columns: 1fr; }
+      .section, .bio-section, .blog-preview { padding: 64px 20px; }
+      .hero-grid { padding: 60px 20px; }
+      .stats-bar { padding: 24px 20px; }
+      .cta-banner { padding: 64px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-deco"></div>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Estética Avançada · São Paulo</p>
+        <h1>
+          Realce a sua<br>
+          <em>melhor versão</em>
+        </h1>
+        <p class="hero-sub">
+          Procedimentos de alta precisão para harmonização facial e corporal, com tecnologia de ponta e o olhar clínico do Dr. Nilmar Bispo — mais de 16 anos transformando autoestima.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/5511966504825?text=Olá!+Gostaria+de+agendar+uma+avaliação+gratuita." target="_blank" class="btn-primary">Agendar Avaliação Gratuita</a>
+          <a href="#procedimentos" class="btn-outline">Conhecer Procedimentos</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="hero-photo-placeholder">
+          <!-- Substitua por: <img src="img/dr-nilmar-hero.jpg" alt="Dr. Nilmar Bispo" style="width:100%;height:100%;object-fit:cover;border-radius:4px"> -->
+          <div class="photo-icon">📷</div>
+          <p class="photo-label">Foto do Dr. Nilmar Bispo<br>na clínica (inserir aqui)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">16+</span>
+        <span class="stat-label">Anos de Experiência</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Unidades em SP</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">10k+</span>
+        <span class="stat-label">Pacientes Atendidos</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Foco no Resultado</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCEDIMENTOS -->
+  <section class="section" id="procedimentos">
+    <div class="section-inner">
+      <p class="section-eyebrow">O que fazemos</p>
+      <h2 class="section-title">Procedimentos<br>especializados</h2>
+      <p class="section-sub">Cada tratamento é personalizado para o seu perfil, com protocolos baseados em evidências e estética de alto padrão.</p>
+
+      <div class="procedures-grid">
+        <a href="/harmonizacao-facial" class="proc-card">
+          <span class="proc-num">01</span>
+          <h3>Harmonização Facial</h3>
+          <p>Preenchimento labial, contorno facial, rinomodelação, botox e muito mais. Resultados naturais que realçam a sua beleza original.</p>
+          <span class="proc-link">Saiba mais</span>
+        </a>
+        <a href="/harmonizacao-corporal" class="proc-card">
+          <span class="proc-num">02</span>
+          <h3>Harmonização Corporal</h3>
+          <p>Bioestimuladores, fios de sustentação, tratamento de celulite e definição corporal com tecnologia não-invasiva de última geração.</p>
+          <span class="proc-link">Saiba mais</span>
+        </a>
+        <a href="/endolaser" class="proc-card">
+          <span class="proc-num">03</span>
+          <h3>Endolaser</h3>
+          <p>Tecnologia laser de alta precisão para redução de gordura localizada e contorno corporal sem cirurgia. 1ª sessão com resultado visível.</p>
+          <span class="proc-link">Saiba mais</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIO -->
+  <section class="bio-section" id="bio">
+    <div class="bio-inner">
+      <div class="bio-photo-wrap">
+        <div class="bio-photo">
+          <!-- Substitua por: <img src="img/dr-nilmar-bio.jpg" alt="Dr. Nilmar Bispo" style="width:100%;height:100%;object-fit:cover;border-radius:4px"> -->
+          <div class="photo-icon" style="font-size:2.5rem;opacity:0.3">📷</div>
+          <p style="font-size:0.78rem;opacity:0.45;letter-spacing:0.08em;margin-top:12px">Foto do Dr. Nilmar<br>na clínica (inserir aqui)</p>
+        </div>
+        <div class="bio-photo-tag">
+          <strong>16+</strong>
+          <span>anos de<br>experiência</span>
+        </div>
+      </div>
+
+      <div class="bio-content">
+        <p class="section-eyebrow">Quem é</p>
+        <h2>Dr. <em>Nilmar Bispo</em></h2>
+        <p class="bio-subtitle">Médico Especialista em Estética Avançada · CRM [INSERIR]</p>
+
+        <p class="bio-text">
+          O Dr. Nilmar Bispo é referência em estética avançada em São Paulo, com mais de 16 anos dedicados à arte de harmonizar e transformar. Sua abordagem combina rigor científico com sensibilidade estética, buscando sempre resultados que respeitem a individualidade de cada paciente.
+        </p>
+        <p class="bio-text">
+          Pioneiro no uso do Endolaser na região do ABC Paulista, o Dr. Nilmar acumula milhares de procedimentos realizados com segurança e precisão. Sua formação continua em constante atualização, participando dos principais congressos nacionais e internacionais de medicina estética.
+        </p>
+        <p class="bio-text">
+          Além da excelência técnica, o diferencial está no acolhimento: cada consulta é uma parceria entre médico e paciente, com escuta ativa e plano personalizado para os melhores resultados.
+        </p>
+
+        <div class="bio-credentials">
+          <div class="credential">
+            <div class="credential-label">Especialidade</div>
+            <div class="credential-value">Medicina Estética Avançada</div>
+          </div>
+          <div class="credential">
+            <div class="credential-label">Formação</div>
+            <div class="credential-value">Inserir faculdade/pós</div>
+          </div>
+          <div class="credential">
+            <div class="credential-label">Membro</div>
+            <div class="credential-value">Inserir associações</div>
+          </div>
+          <div class="credential">
+            <div class="credential-label">Destaque</div>
+            <div class="credential-value">Pioneiro em Endolaser no ABC</div>
+          </div>
+        </div>
+
+        <div class="bio-units">
+          <h4>Unidades de Atendimento</h4>
+          <ul class="unit-list">
+            <li>São Bernardo do Campo</li>
+            <li>Tatuapé</li>
+            <li>Paulista (próximo ao Metrô Brigadeiro)</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:36px">
+          <a href="https://wa.me/5511966504825?text=Olá+Dr.+Nilmar!+Gostaria+de+agendar+uma+consulta." target="_blank" class="btn-primary">Agendar com Dr. Nilmar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="blog-preview">
+    <div class="section-inner">
+      <p class="section-eyebrow">Conteúdo & Educação</p>
+      <h2 class="section-title">Blog da Clínica</h2>
+      <p class="section-sub">Informação de qualidade sobre estética, procedimentos e cuidados. Produzido pelo Dr. Nilmar para você tomar decisões com segurança.</p>
+
+      <div class="blog-grid">
+        <a href="blog/endolaser-o-que-e.html" class="blog-card">
+          <div class="blog-card-img">IMAGEM DO POST</div>
+          <div class="blog-card-body">
+            <p class="blog-tag">Endolaser</p>
+            <h3>O que é o Endolaser e como funciona?</h3>
+            <p>Tudo sobre o procedimento que está revolucionando o contorno corporal sem cirurgia.</p>
+            <p class="blog-read">Ler artigo →</p>
+          </div>
+        </a>
+        <a href="blog/harmonizacao-facial-guia.html" class="blog-card">
+          <div class="blog-card-img">IMAGEM DO POST</div>
+          <div class="blog-card-body">
+            <p class="blog-tag">Harmonização Facial</p>
+            <h3>Guia completo de harmonização facial</h3>
+            <p>Botox, preenchimento, rinomodelação: saiba qual procedimento é certo para você.</p>
+            <p class="blog-read">Ler artigo →</p>
+          </div>
+        </a>
+        <a href="blog/cuidados-pos-procedimento.html" class="blog-card">
+          <div class="blog-card-img">IMAGEM DO POST</div>
+          <div class="blog-card-body">
+            <p class="blog-tag">Cuidados</p>
+            <h3>Cuidados essenciais pós-procedimento estético</h3>
+            <p>Como garantir o melhor resultado e recuperação após os tratamentos na clínica.</p>
+            <p class="blog-read">Ler artigo →</p>
+          </div>
+        </a>
+      </div>
+
+      <div style="text-align:center;margin-top:48px">
+        <a href="/blog" class="btn-outline">Ver todos os artigos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Pronto para a sua <em>transformação</em>?</h2>
+    <p>Agende sua avaliação gratuita e descubra o procedimento ideal para você.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/5511966504825?text=Olá!+Gostaria+de+agendar+uma+avaliação+gratuita." target="_blank" class="btn-primary">Agendar via WhatsApp</a>
+      <a href="https://wa.me/5511966504825?text=Olá!+Gostaria+de+saber+os+valores+dos+procedimentos." target="_blank" class="btn-outline">Consultar Valores</a>
+    </div>
+  </section>
+
+</body>
+</html>
