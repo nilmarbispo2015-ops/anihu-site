@@ -369,30 +369,30 @@
       <div class="bio-content">
         <p class="section-eyebrow">Quem é</p>
         <h2>Dr. <em>Nilmar Bispo</em></h2>
-        <p class="bio-subtitle">Enfermeiro Especialista em Enfermagem Estética e Dermatológica · COREN-SP [INSERIR]</p>
+        <p class="bio-subtitle">Médico Especialista em Estética Avançada · CRM [INSERIR]</p>
 
         <p class="bio-text">
-          O Enf. Nilmar Bispo é referência em enfermagem estética e dermatológica em São Paulo, com mais de 16 anos dedicados à saúde integrativa e à arte de cuidar. Sua abordagem une o rigor técnico da enfermagem com uma visão holística do paciente, buscando sempre resultados que respeitem a individualidade de cada pessoa.
+          O Dr. Nilmar Bispo é referência em estética avançada em São Paulo, com mais de 16 anos dedicados à arte de harmonizar e transformar. Sua abordagem combina rigor científico com sensibilidade estética, buscando sempre resultados que respeitem a individualidade de cada paciente.
         </p>
         <p class="bio-text">
-          Pioneiro no uso do Endolaser na região do ABC Paulista, o Enf. Nilmar acumula milhares de procedimentos realizados com segurança e precisão. Especialista em curativos, feridas complexas e estética dermatológica, sua formação está em constante evolução — com participação nos principais congressos nacionais de enfermagem estética e saúde integrativa.
+          Pioneiro no uso do Endolaser na região do ABC Paulista, o Dr. Nilmar acumula milhares de procedimentos realizados com segurança e precisão. Sua formação continua em constante atualização, participando dos principais congressos nacionais e internacionais de medicina estética.
         </p>
         <p class="bio-text">
-          Além da excelência técnica, o diferencial está no acolhimento humanizado: cada consulta é uma parceria entre profissional e paciente, com escuta ativa, olhar clínico e plano personalizado para os melhores resultados em estética e saúde.
+          Além da excelência técnica, o diferencial está no acolhimento: cada consulta é uma parceria entre médico e paciente, com escuta ativa e plano personalizado para os melhores resultados.
         </p>
 
         <div class="bio-credentials">
           <div class="credential">
             <div class="credential-label">Especialidade</div>
-            <div class="credential-value">Enfermagem Estética e Dermatológica</div>
+            <div class="credential-value">Medicina Estética Avançada</div>
           </div>
           <div class="credential">
             <div class="credential-label">Formação</div>
-            <div class="credential-value">Especialização em Enfermagem Estética e Dermatológica</div>
+            <div class="credential-value">Inserir faculdade/pós</div>
           </div>
           <div class="credential">
             <div class="credential-label">Membro</div>
-            <div class="credential-value">Saúde Integrativa & Wound Care</div>
+            <div class="credential-value">Inserir associações</div>
           </div>
           <div class="credential">
             <div class="credential-label">Destaque</div>
@@ -421,7 +421,7 @@
     <div class="section-inner">
       <p class="section-eyebrow">Conteúdo & Educação</p>
       <h2 class="section-title">Blog da Clínica</h2>
-      <p class="section-sub">Informação de qualidade sobre estética, procedimentos e cuidados. Produzido pelo Enf. Nilmar para você tomar decisões com segurança.</p>
+      <p class="section-sub">Informação de qualidade sobre estética, procedimentos e cuidados. Produzido pelo Dr. Nilmar para você tomar decisões com segurança.</p>
 
       <div class="blog-grid">
         <a href="blog/endolaser-o-que-e.html" class="blog-card">

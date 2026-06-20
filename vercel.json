@@ -6,6 +6,7 @@
     { "source": "/harmonizacao-facial", "destination": "/harmonizacao-facial/index.html" },
     { "source": "/harmonizacao-corporal", "destination": "/harmonizacao-corporal/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/curativos", "destination": "/curativos/index.html" },
     { "source": "/blog/:slug", "destination": "/blog/:slug/index.html" }
   ],
   "headers": [
