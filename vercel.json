@@ -8,6 +8,7 @@
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/curativos", "destination": "/curativos/index.html" },
     { "source": "/drenagem-lipofuncional", "destination": "/drenagem-lipofuncional/index.html" },
+    { "source": "/saude-integrativa", "destination": "/saude-integrativa/index.html" },
     { "source": "/blog/:slug", "destination": "/blog/:slug/index.html" }
   ],
   "headers": [
