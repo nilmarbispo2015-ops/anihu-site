@@ -128,6 +128,7 @@
       <li><a href="/harmonizacao-corporal" data-page="/harmonizacao-corporal">Harmonização Corporal</a></li>
       <li><a href="/endolaser" data-page="/endolaser">Endolaser</a></li>
       <li><a href="/curativos" data-page="/curativos">Curativos</a></li>
+      <li><a href="/drenagem-lipofuncional" data-page="/drenagem-lipofuncional">Drenagem</a></li>
       <li><a href="/blog" data-page="/blog">Blog</a></li>
       <li><a href="https://wa.me/5511966504825?text=Olá!+Gostaria+de+agendar+uma+avaliação." target="_blank" class="nav-cta">Agendar</a></li>
     </ul>

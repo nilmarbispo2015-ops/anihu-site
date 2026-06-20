@@ -7,6 +7,7 @@
     { "source": "/harmonizacao-corporal", "destination": "/harmonizacao-corporal/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/curativos", "destination": "/curativos/index.html" },
+    { "source": "/drenagem-lipofuncional", "destination": "/drenagem-lipofuncional/index.html" },
     { "source": "/blog/:slug", "destination": "/blog/:slug/index.html" }
   ],
   "headers": [

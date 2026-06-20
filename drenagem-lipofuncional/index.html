@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drenagem Lipofuncional · ANI-HU · Nilmar Bispo — Redução de Gordura e Inchaço</title>
+  <meta name="description" content="Drenagem Lipofuncional com Nilmar Bispo: redução de gordura localizada, inchaço e retenção de líquido. Técnica especializada em São Paulo.">
+  <meta name="keywords" content="drenagem lipofuncional São Paulo, drenagem linfática gordura, redução inchaço, Nilmar Bispo drenagem">
+  <script src="/nav.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#071022;--navy2:#0d1a35;--gold:#C9A84C;--gold-light:#e8c97a;--white:#fff;--gray:#8a9ab5;--text:#d4dbe8}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--navy);color:var(--text);font-family:'Inter',sans-serif}
+
+    /* HERO */
+    .hero{min-height:70vh;background:linear-gradient(135deg,#040d1c 0%,#071022 60%,#0a1628 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:110px 40px 80px}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 70% 50%,rgba(201,168,76,0.07) 0%,transparent 70%)}
+    .hero-inner{max-width:800px;margin:0 auto;text-align:center;position:relative}
+    .hero-eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:20px}
+    .hero h1 em{font-style:italic;color:var(--gold)}
+    .hero-sub{font-size:1.05rem;color:var(--gray);line-height:1.75;margin-bottom:36px;max-width:620px;margin-left:auto;margin-right:auto}
+    .hero-badges{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:36px}
+    .badge{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px}
+    .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:var(--gold);color:var(--navy);padding:16px 32px;border-radius:2px;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .25s;display:inline-block}
+    .btn-primary:hover{background:var(--gold-light)}
+    .btn-outline{border:1px solid rgba(201,168,76,.4);color:var(--gold);padding:16px 28px;border-radius:2px;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .25s;display:inline-block}
+    .btn-outline:hover{border-color:var(--gold);background:rgba(201,168,76,.05)}
+
+    /* INTRO */
+    .intro{padding:90px 40px;background:var(--navy2)}
+    .intro-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .intro-photo{aspect-ratio:4/5;background:linear-gradient(160deg,#0d1a35,#131f3a);border:1px solid rgba(201,168,76,.2);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--gray);text-align:center;padding:40px}
+    /* Para inserir foto: <img src="/img/drenagem-intro.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:4px"> */
+    .eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .intro-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--white);margin-bottom:20px;line-height:1.2}
+    .intro-content p{color:var(--gray);font-size:.95rem;line-height:1.85;margin-bottom:16px}
+    .intro-highlight{background:rgba(201,168,76,.06);border-left:2px solid var(--gold);padding:16px 20px;margin:24px 0;font-size:.9rem;color:var(--text);line-height:1.7;font-style:italic}
+
+    /* BENEFICIOS */
+    .section{padding:90px 40px}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .section-eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--white);margin-bottom:16px}
+    .section-sub{color:var(--gray);font-size:1rem;line-height:1.7;max-width:560px;margin-bottom:60px}
+
+    .beneficios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .beneficio-card{background:var(--navy2);padding:44px 32px;position:relative;overflow:hidden;transition:background .3s}
+    .beneficio-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .35s}
+    .beneficio-card:hover{background:#0f1f3d}
+    .beneficio-card:hover::before{transform:scaleX(1)}
+    .beneficio-icon{font-size:2.2rem;margin-bottom:20px;display:block}
+    .beneficio-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--white);margin-bottom:12px}
+    .beneficio-card p{font-size:.87rem;color:var(--gray);line-height:1.75}
+
+    /* COMO FUNCIONA */
+    .como-funciona{background:var(--navy2);padding:90px 40px}
+    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px}
+    .step{background:var(--navy);padding:36px 28px;text-align:center}
+    .step-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(201,168,76,.2);line-height:1;margin-bottom:12px}
+    .step h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);margin-bottom:8px}
+    .step p{font-size:.82rem;color:var(--gray);line-height:1.65}
+
+    /* RESULTADOS */
+    .resultados{padding:90px 40px}
+    .resultados-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:56px}
+    .resultado-card{background:var(--navy2);border:1px solid rgba(201,168,76,.1);border-radius:4px;overflow:hidden;transition:border-color .3s,transform .3s}
+    .resultado-card:hover{border-color:rgba(201,168,76,.4);transform:translateY(-4px)}
+    .resultado-img{aspect-ratio:16/9;background:linear-gradient(135deg,#0d1a35,#131f3a);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--gray)}
+    /* Para inserir foto: <img src="/img/drenagem-resultado1.jpg" style="width:100%;height:100%;object-fit:cover"> */
+    .resultado-img .ph-icon{font-size:2rem;opacity:.25}
+    .resultado-img .ph-text{font-size:.72rem;letter-spacing:.08em;opacity:.4;text-align:center}
+    .resultado-body{padding:20px}
+    .resultado-tag{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .resultado-card h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);margin-bottom:6px}
+    .resultado-card p{font-size:.82rem;color:var(--gray);line-height:1.6}
+
+    /* VIDEO */
+    .video-section{background:var(--navy2);padding:90px 40px}
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+    .video-card{background:var(--navy);border:1px solid rgba(201,168,76,.1);border-radius:4px;overflow:hidden;transition:border-color .3s}
+    .video-card:hover{border-color:rgba(201,168,76,.3)}
+    .video-placeholder{aspect-ratio:9/16;background:linear-gradient(135deg,#0d1a35,#131f3a);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--gray);position:relative}
+    /* Para inserir vídeo: <video src="/img/drenagem-video1.mp4" controls style="width:100%;height:100%;object-fit:cover"> */
+    .video-play{width:56px;height:56px;border:2px solid rgba(201,168,76,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;opacity:.4}
+    .video-label{font-size:.72rem;letter-spacing:.08em;opacity:.4;text-align:center}
+    .video-body{padding:16px 20px}
+    .video-tag{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .video-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white)}
+
+    /* INDICACOES */
+    .indicacoes{padding:90px 40px}
+    .indicacoes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:56px}
+    .indicacao{display:flex;gap:20px;align-items:flex-start;background:var(--navy2);border:1px solid rgba(201,168,76,.08);padding:28px;border-radius:2px;transition:border-color .3s}
+    .indicacao:hover{border-color:rgba(201,168,76,.3)}
+    .ind-icon{width:44px;height:44px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+    .ind-text h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);margin-bottom:6px}
+    .ind-text p{font-size:.85rem;color:var(--gray);line-height:1.7}
+
+    /* FAQ */
+    .faq-section{background:var(--navy2);padding:90px 40px}
+    .faq-list{margin-top:48px}
+    .faq-item{border-bottom:1px solid rgba(201,168,76,.1)}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--white);gap:16px}
+    .faq-q .icon{color:var(--gold);font-size:1.4rem;transition:transform .3s;flex-shrink:0}
+    .faq-q.open .icon{transform:rotate(45deg)}
+    .faq-a{display:none;padding:0 0 24px;font-size:.92rem;color:var(--gray);line-height:1.85;max-width:760px}
+    .faq-a.open{display:block}
+
+    /* CTA */
+    .cta-banner{background:linear-gradient(135deg,#040d1c,#071022);border-top:1px solid rgba(201,168,76,.2);padding:90px 40px;text-align:center}
+    .cta-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:300;color:var(--white);margin-bottom:16px}
+    .cta-banner h2 em{color:var(--gold);font-style:italic}
+    .cta-banner p{color:var(--gray);margin-bottom:36px;font-size:1rem;max-width:500px;margin-left:auto;margin-right:auto}
+    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+    @media(max-width:900px){
+      .intro-inner{grid-template-columns:1fr;gap:40px}
+      .beneficios-grid{grid-template-columns:1fr}
+      .steps-grid{grid-template-columns:repeat(2,1fr)}
+      .resultados-grid{grid-template-columns:1fr}
+      .video-grid{grid-template-columns:1fr}
+      .indicacoes-grid{grid-template-columns:1fr}
+      .hero,.intro,.section,.como-funciona,.resultados,.video-section,.indicacoes,.faq-section,.cta-banner{padding:64px 20px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">ANI-HU · Saúde Integrativa · São Paulo</p>
+      <h1>Drenagem<br><em>Lipofuncional</em></h1>
+      <p class="hero-sub">Técnica especializada que combina drenagem linfática com manobras lipofuncionais para reduzir gordura localizada, eliminar inchaço e modelar o corpo de forma natural e eficaz.</p>
+      <div class="hero-badges">
+        <span class="badge">Reduz gordura</span>
+        <span class="badge">Elimina inchaço</span>
+        <span class="badge">Sem agulhas</span>
+        <span class="badge">Resultado progressivo</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://wa.me/5511966504825?text=Olá!+Tenho+interesse+em+Drenagem+Lipofuncional.+Gostaria+de+agendar+uma+avaliação." target="_blank" class="btn-primary">Agendar Avaliação</a>
+        <a href="#resultados" class="btn-outline">Ver Resultados</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-inner">
+      <div class="intro-photo">
+        <!-- INSERIR FOTO: <img src="/img/drenagem-intro.jpg" alt="Drenagem Lipofuncional" style="width:100%;height:100%;object-fit:cover;border-radius:4px"> -->
+        <div style="font-size:2rem;opacity:.3">📷</div>
+        <p style="font-size:.75rem;opacity:.4;margin-top:10px;letter-spacing:.08em">Foto do procedimento<br>(inserir aqui)</p>
+      </div>
+      <div class="intro-content">
+        <p class="eyebrow">O que é</p>
+        <h2>Além da drenagem<br>tradicional</h2>
+        <p>A Drenagem Lipofuncional é uma técnica avançada que vai além da drenagem linfática convencional. Ela combina manobras específicas para estimular o sistema linfático com movimentos direcionados para a quebra de nódulos de gordura — resultando em uma abordagem completa para o contorno corporal.</p>
+        <p>Com pressão, ritmo e direção específicos, a técnica age simultaneamente na retenção de líquidos, no inchaço e na gordura localizada — sem agulhas, sem medicamentos e sem tempo de recuperação.</p>
+        <div class="intro-highlight">
+          "A Drenagem Lipofuncional é uma das ferramentas mais poderosas que tenho para tratar gordura e inchaço de forma integrada — o resultado visível desde as primeiras sessões faz toda a diferença na motivação do paciente." — Enf. Nilmar Bispo
+        </div>
+        <a href="https://wa.me/5511966504825?text=Olá!+Gostaria+de+saber+mais+sobre+Drenagem+Lipofuncional." target="_blank" class="btn-primary">Tirar Dúvidas pelo WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow">O que trata</p>
+      <h2 class="section-title">Benefícios da técnica</h2>
+      <p class="section-sub">Uma abordagem que age em múltiplas frentes para transformar o contorno corporal.</p>
+      <div class="beneficios-grid">
+        <div class="beneficio-card">
+          <span class="beneficio-icon">💧</span>
+          <h3>Elimina o Inchaço</h3>
+          <p>As manobras de drenagem estimulam o sistema linfático a transportar o excesso de líquido intersticial, reduzindo o inchaço e a sensação de peso nas pernas, abdômen e braços.</p>
+        </div>
+        <div class="beneficio-card">
+          <span class="beneficio-icon">🎯</span>
+          <h3>Reduz Gordura Localizada</h3>
+          <p>As manobras lipofuncionais atuam diretamente nos nódulos de gordura, promovendo a quebra do tecido adiposo e facilitando sua absorção pelo organismo de forma natural.</p>
+        </div>
+        <div class="beneficio-card">
+          <span class="beneficio-icon">✨</span>
+          <h3>Modela o Contorno</h3>
+          <p>A combinação das técnicas resulta em uma melhora visível do contorno corporal, com redução de medidas e definição das curvas de forma progressiva e natural.</p>
+        </div>
+        <div class="beneficio-card">
+          <span class="beneficio-icon">🌿</span>
+          <h3>Melhora a Celulite</h3>
+          <p>A drenagem lipofuncional atua na microcirculação e no tecido conjuntivo, reduzindo o aspecto de casca de laranja e melhorando a textura da pele progressivamente.</p>
+        </div>
+        <div class="beneficio-card">
+          <span class="beneficio-icon">⚡</span>
+          <h3>Potencializa Procedimentos</h3>
+          <p>Quando combinada com Endolaser ou outros procedimentos estéticos, a drenagem lipofuncional acelera a recuperação e potencializa os resultados obtidos.</p>
+        </div>
+        <div class="beneficio-card">
+          <span class="beneficio-icon">💆</span>
+          <h3>Bem-estar e Leveza</h3>
+          <p>Além dos benefícios estéticos, a técnica promove relaxamento, melhora a circulação e reduz a sensação de cansaço e peso — com bem-estar perceptível após cada sessão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="como-funciona">
+    <div class="section-inner">
+      <p class="section-eyebrow">O protocolo</p>
+      <h2 class="section-title">Como é a sessão</h2>
+      <p class="section-sub">Cada sessão é personalizada conforme o objetivo e as necessidades do paciente.</p>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Avaliação</h4>
+          <p>Análise das áreas de inchaço e gordura localizada. Definição do protocolo e número de sessões ideal.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Preparação</h4>
+          <p>Posicionamento confortável. Aplicação de óleo específico para facilitar as manobras e potencializar o resultado.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>Drenagem Lipofuncional</h4>
+          <p>Manobras específicas combinando pressão rítmica linfática com movimentos lipofuncionais nas áreas-alvo.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Orientações</h4>
+          <p>Hidratação, alimentação e cuidados pós-sessão para maximizar e prolongar os resultados obtidos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="resultados" id="resultados">
+    <div class="section-inner">
+      <p class="section-eyebrow">Resultados reais</p>
+      <h2 class="section-title">Antes & Depois</h2>
+      <p class="section-sub">Casos reais de pacientes atendidos pelo Enf. Nilmar Bispo.</p>
+      <div class="resultados-grid">
+
+        <div class="resultado-card">
+          <div class="resultado-img">
+            <!-- INSERIR FOTO: <img src="/img/drenagem-resultado1.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+            <span class="ph-icon">📷</span>
+            <span class="ph-text">Foto antes/depois<br>(inserir aqui)</span>
+          </div>
+          <div class="resultado-body">
+            <p class="resultado-tag">Gordura localizada · Antes & Depois</p>
+            <h4>Redução de medidas e contorno</h4>
+            <p>Resultado após protocolo de sessões de Drenagem Lipofuncional.</p>
+          </div>
+        </div>
+
+        <div class="resultado-card">
+          <div class="resultado-img">
+            <!-- INSERIR FOTO: <img src="/img/drenagem-resultado2.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+            <span class="ph-icon">📷</span>
+            <span class="ph-text">Foto antes/depois<br>(inserir aqui)</span>
+          </div>
+          <div class="resultado-body">
+            <p class="resultado-tag">Inchaço · Antes & Depois</p>
+            <h4>Eliminação de inchaço e retenção</h4>
+            <p>Melhora visível do inchaço e da sensação de peso após as sessões.</p>
+          </div>
+        </div>
+
+        <div class="resultado-card">
+          <div class="resultado-img">
+            <!-- INSERIR FOTO: <img src="/img/drenagem-resultado3.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+            <span class="ph-icon">📷</span>
+            <span class="ph-text">Foto antes/depois<br>(inserir aqui)</span>
+          </div>
+          <div class="resultado-body">
+            <p class="resultado-tag">Celulite · Antes & Depois</p>
+            <h4>Melhora da textura da pele</h4>
+            <p>Redução do aspecto de casca de laranja com protocolo combinado.</p>
+          </div>
+        </div>
+
+        <div class="resultado-card">
+          <div class="resultado-img">
+            <!-- INSERIR FOTO: <img src="/img/drenagem-resultado4.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+            <span class="ph-icon">📷</span>
+            <span class="ph-text">Foto antes/depois<br>(inserir aqui)</span>
+          </div>
+          <div class="resultado-body">
+            <p class="resultado-tag">Pós-Endolaser · Antes & Depois</p>
+            <h4>Recuperação acelerada pós-procedimento</h4>
+            <p>Drenagem lipofuncional potencializando o resultado do Endolaser.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="video-section">
+    <div class="section-inner">
+      <p class="section-eyebrow">Veja na prática</p>
+      <h2 class="section-title">Vídeos do procedimento</h2>
+      <p class="section-sub">Acompanhe de perto como é realizada a Drenagem Lipofuncional.</p>
+      <div class="video-grid">
+
+        <div class="video-card">
+          <div class="video-placeholder">
+            <!-- INSERIR VÍDEO: <video src="/img/drenagem-video1.mp4" controls style="width:100%;height:100%;object-fit:cover"></video> -->
+            <div class="video-play">▶</div>
+            <span class="video-label">Vídeo 1<br>(inserir aqui)</span>
+          </div>
+          <div class="video-body">
+            <p class="video-tag">Técnica</p>
+            <h4>Manobras lipofuncionais no abdômen</h4>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-placeholder">
+            <!-- INSERIR VÍDEO: <video src="/img/drenagem-video2.mp4" controls style="width:100%;height:100%;object-fit:cover"></video> -->
+            <div class="video-play">▶</div>
+            <span class="video-label">Vídeo 2<br>(inserir aqui)</span>
+          </div>
+          <div class="video-body">
+            <p class="video-tag">Resultado</p>
+            <h4>Antes e depois em tempo real</h4>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-placeholder">
+            <!-- INSERIR VÍDEO: <video src="/img/drenagem-video3.mp4" controls style="width:100%;height:100%;object-fit:cover"></video> -->
+            <div class="video-play">▶</div>
+            <span class="video-label">Vídeo 3<br>(inserir aqui)</span>
+          </div>
+          <div class="video-body">
+            <p class="video-tag">Depoimento</p>
+            <h4>Experiência de paciente real</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INDICAÇÕES -->
+  <section class="indicacoes">
+    <div class="section-inner">
+      <p class="section-eyebrow">Para quem é indicado</p>
+      <h2 class="section-title">Indicações</h2>
+      <p class="section-sub">A Drenagem Lipofuncional é indicada para diversas situações. Confira as principais.</p>
+      <div class="indicacoes-grid">
+        <div class="indicacao">
+          <div class="ind-icon">💧</div>
+          <div class="ind-text">
+            <h4>Retenção de Líquido e Inchaço</h4>
+            <p>Ideal para quem sofre com inchaço crônico, sensação de peso nas pernas e retenção de líquido generalizada.</p>
+          </div>
+        </div>
+        <div class="indicacao">
+          <div class="ind-icon">🎯</div>
+          <div class="ind-text">
+            <h4>Gordura Localizada</h4>
+            <p>Para redução de gordura em abdômen, flancos, coxas, braços e outras regiões resistentes à dieta e exercício.</p>
+          </div>
+        </div>
+        <div class="indicacao">
+          <div class="ind-icon">⚡</div>
+          <div class="ind-text">
+            <h4>Pós-Endolaser e Pós-Cirúrgico</h4>
+            <p>Acelera a recuperação, reduz o edema e potencializa os resultados de procedimentos estéticos e cirurgias.</p>
+          </div>
+        </div>
+        <div class="indicacao">
+          <div class="ind-icon">🌿</div>
+          <div class="ind-text">
+            <h4>Celulite</h4>
+            <p>Melhora da microcirculação e redução do aspecto de casca de laranja em coxas, glúteos e abdômen.</p>
+          </div>
+        </div>
+        <div class="indicacao">
+          <div class="ind-icon">💆</div>
+          <div class="ind-text">
+            <h4>Tensão e Estresse</h4>
+            <p>A técnica também promove relaxamento profundo, reduz a tensão muscular e melhora o bem-estar geral.</p>
+          </div>
+        </div>
+        <div class="indicacao">
+          <div class="ind-icon">📐</div>
+          <div class="ind-text">
+            <h4>Modelagem Corporal</h4>
+            <p>Para quem deseja definir o contorno corporal, reduzir medidas e melhorar a silhueta de forma progressiva.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="section-inner">
+      <p class="section-eyebrow">Dúvidas frequentes</p>
+      <h2 class="section-title">Perguntas sobre<br>Drenagem Lipofuncional</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Qual a diferença entre drenagem linfática e lipofuncional? <span class="icon">+</span></button>
+          <div class="faq-a">A drenagem linfática tradicional foca exclusivamente no estímulo do sistema linfático para eliminação de líquidos. A Drenagem Lipofuncional vai além: combina as manobras linfáticas com técnicas específicas para quebra de nódulos de gordura, resultando em uma abordagem mais completa que trata simultaneamente o inchaço e a gordura localizada.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Quantas sessões são necessárias? <span class="icon">+</span></button>
+          <div class="faq-a">O número de sessões varia conforme o objetivo e a condição de cada paciente. Em geral, recomenda-se um protocolo de 10 a 20 sessões para resultados expressivos, com frequência de 2 a 3 vezes por semana. Os primeiros resultados são percebidos já nas primeiras sessões.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">A drenagem lipofuncional dói? <span class="icon">+</span></button>
+          <div class="faq-a">Não. A técnica é realizada com pressão suave e ritmo específico, sendo uma sessão relaxante e confortável. Em algumas áreas com maior acúmulo de gordura ou tensão, pode haver uma sensação de pressão mais intensa, mas sem dor.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Posso fazer junto com o Endolaser? <span class="icon">+</span></button>
+          <div class="faq-a">Sim! A drenagem lipofuncional é altamente recomendada como complemento ao Endolaser. Ela acelera a absorção da gordura liquefeita pelo laser, reduz o edema pós-procedimento e potencializa o contorno corporal. O Enf. Nilmar pode montar um protocolo combinado personalizado para você.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">O resultado é permanente? <span class="icon">+</span></button>
+          <div class="faq-a">Os resultados são progressivos e duradouros com a manutenção do protocolo. Para gordura localizada, sessões de manutenção mensais ajudam a preservar o resultado. Para inchaço crônico, a frequência de manutenção é definida conforme a evolução de cada paciente.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Menos gordura,<br>menos inchaço, mais <em>leveza</em></h2>
+    <p>Agende sua avaliação e descubra o protocolo ideal para o seu corpo.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/5511966504825?text=Olá!+Tenho+interesse+em+Drenagem+Lipofuncional.+Gostaria+de+agendar+uma+avaliação." target="_blank" class="btn-primary">Agendar pelo WhatsApp</a>
+      <a href="https://wa.me/5511966504825?text=Olá!+Tenho+dúvidas+sobre+a+Drenagem+Lipofuncional." target="_blank" class="btn-outline">Tirar Dúvidas</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleFaq(btn){
+      const a=btn.nextElementSibling;const open=btn.classList.contains('open');
+      document.querySelectorAll('.faq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});
+      if(!open){btn.classList.add('open');a.classList.add('open');}
+    }
+  </script>
+</body>
+</html>
