@@ -3,85 +3,410 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Endolaser · ANI-HU · Dr. Nilmar Bispo — Contorno Corporal Sem Cirurgia</title>
-  <meta name="description" content="Endolaser com Dr. Nilmar Bispo: redução de gordura localizada sem cirurgia. Resultado visível desde a 1ª sessão. Agende sua avaliação gratuita.">
-  <meta name="keywords" content="endolaser São Paulo, gordura localizada sem cirurgia, lipolaser, Dr Nilmar Bispo endolaser, contorno corporal">
+  <title>Endolaser · ANI-HU · Nilmar Bispo — Redução de Gordura e Flacidez Sem Cirurgia</title>
+  <meta name="description" content="Endolaser com Nilmar Bispo: redução de gordura localizada e diminuição da flacidez sem cirurgia. Resultado visível desde a 1ª sessão. Agende sua avaliação gratuita em São Paulo.">
+  <meta name="keywords" content="endolaser São Paulo, redução gordura localizada, diminuir flacidez, lipolaser, contorno corporal sem cirurgia, Nilmar Bispo">
   <script src="/nav.js" defer></script>
-
-  <!--
-  ═══════════════════════════════════════════════════════════════
-  INSTRUÇÃO PARA O DESENVOLVEDOR:
-  ═══════════════════════════════════════════════════════════════
-  Cole aqui o conteúdo do seu index.html atual (a landing page
-  do Endolaser que já estava no site).
-
-  Remova apenas:
-  - O <head> completo (já está acima)
-  - As tags <html>, <body> de abertura e fechamento
-  - Qualquer menu/rodapé antigo (o nav.js já injeta o novo)
-
-  O nav.js adiciona automaticamente padding-top: 70px ao body
-  para compensar o menu fixo.
-  ═══════════════════════════════════════════════════════════════
-  -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* Estilos base — serão sobrescritos pelos estilos originais da landing page */
-    :root {
-      --navy: #071022;
-      --gold: #C9A84C;
-    }
-    body {
-      background: var(--navy);
-      font-family: 'Inter', sans-serif;
-    }
+    :root{--navy:#071022;--navy2:#0d1a35;--gold:#C9A84C;--gold-light:#e8c97a;--white:#fff;--gray:#8a9ab5;--text:#d4dbe8}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--navy);color:var(--text);font-family:'Inter',sans-serif}
 
-    /* Placeholder temporário — remova quando colar o conteúdo real */
-    .placeholder-notice {
-      max-width: 700px;
-      margin: 80px auto;
-      padding: 60px 40px;
-      text-align: center;
-      border: 1px dashed rgba(201,168,76,0.3);
-      border-radius: 4px;
-    }
-    .placeholder-notice h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: #fff;
-      margin-bottom: 16px;
-    }
-    .placeholder-notice p {
-      color: #8a9ab5;
-      line-height: 1.7;
-      margin-bottom: 12px;
-      font-size: 0.95rem;
-    }
-    .placeholder-notice code {
-      background: rgba(201,168,76,0.1);
-      color: var(--gold);
-      padding: 2px 8px;
-      border-radius: 3px;
-      font-size: 0.85rem;
+    /* HERO */
+    .hero{min-height:100vh;background:linear-gradient(135deg,#040d1c 0%,#071022 60%,#0a1628 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:110px 40px 80px}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 70% 50%,rgba(201,168,76,0.08) 0%,transparent 70%)}
+    .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative}
+    .hero-eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.8rem);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:24px}
+    .hero h1 em{font-style:italic;color:var(--gold)}
+    .hero-sub{font-size:1.05rem;color:var(--gray);line-height:1.75;margin-bottom:36px}
+    .hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+    .badge{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+    .btn-primary{background:var(--gold);color:var(--navy);padding:16px 32px;border-radius:2px;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .25s;display:inline-block}
+    .btn-primary:hover{background:var(--gold-light)}
+    .btn-outline{border:1px solid rgba(201,168,76,.4);color:var(--gold);padding:16px 28px;border-radius:2px;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .25s;display:inline-block}
+    .btn-outline:hover{border-color:var(--gold);background:rgba(201,168,76,.05)}
+
+    /* hero image */
+    .hero-img{position:relative}
+    .hero-img img{width:100%;border-radius:4px;border:1px solid rgba(201,168,76,.2);display:block}
+    .hero-img-tag{position:absolute;bottom:-16px;left:-16px;background:var(--gold);color:var(--navy);padding:16px 20px}
+    .hero-img-tag strong{display:block;font-family:'Cormorant Garamond',serif;font-size:2rem;line-height:1}
+    .hero-img-tag span{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+
+    /* STATS */
+    .stats-bar{background:var(--gold);padding:24px 40px}
+    .stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+    .stat-item{color:var(--navy)}
+    .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;line-height:1;display:block}
+    .stat-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;opacity:.8}
+
+    /* GORDURA + FLACIDEZ */
+    .dual-section{padding:100px 40px;background:var(--navy2)}
+    .dual-inner{max-width:1100px;margin:0 auto}
+    .dual-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:60px}
+    .dual-card{padding:56px 48px;position:relative;overflow:hidden}
+    .dual-card-gordura{background:var(--navy)}
+    .dual-card-flacidez{background:#080f20}
+    .dual-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)}
+    .dual-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:rgba(201,168,76,.1);line-height:1;margin-bottom:4px}
+    .dual-card h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--white);margin-bottom:20px;line-height:1.1}
+    .dual-card h2 em{color:var(--gold);font-style:italic}
+    .dual-card p{font-size:.95rem;color:var(--gray);line-height:1.9;margin-bottom:16px}
+    .dual-list{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:10px}
+    .dual-list li{font-size:.88rem;color:var(--text);display:flex;align-items:flex-start;gap:10px;line-height:1.6}
+    .dual-list li::before{content:'◆';color:var(--gold);font-size:.5rem;margin-top:6px;flex-shrink:0}
+
+    /* COMO FUNCIONA */
+    .how-section{padding:100px 40px}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .section-eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--white);margin-bottom:16px}
+    .section-sub{color:var(--gray);font-size:1rem;line-height:1.7;max-width:560px;margin-bottom:60px}
+
+    .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .how-img img{width:100%;border-radius:4px;border:1px solid rgba(201,168,76,.15)}
+    .steps-list{display:flex;flex-direction:column;gap:0}
+    .step-item{display:flex;gap:24px;padding:28px 0;border-bottom:1px solid rgba(201,168,76,.08)}
+    .step-item:last-child{border-bottom:none}
+    .step-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:rgba(201,168,76,.3);line-height:1;flex-shrink:0;width:48px}
+    .step-text h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);margin-bottom:6px}
+    .step-text p{font-size:.85rem;color:var(--gray);line-height:1.7}
+
+    /* RESULTADOS */
+    .resultados{padding:100px 40px;background:var(--navy2)}
+    .results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:56px}
+    .result-card{position:relative;overflow:hidden;cursor:pointer}
+    .result-card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform .4s}
+    .result-card:hover img{transform:scale(1.04)}
+    .result-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(7,16,34,.92) 100%);opacity:0;transition:opacity .3s}
+    .result-card:hover .result-overlay{opacity:1}
+    .result-label{position:absolute;bottom:0;left:0;right:0;padding:20px;transform:translateY(100%);transition:transform .3s}
+    .result-card:hover .result-label{transform:translateY(0)}
+    .result-tag{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+    .result-desc{font-size:.82rem;color:var(--white);line-height:1.5}
+
+    /* wide cards row */
+    .results-grid-wide{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:3px}
+    .result-card-wide img{aspect-ratio:16/9;object-fit:cover}
+
+    /* AREAS */
+    .areas-section{padding:100px 40px}
+    .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px}
+    .area-item{background:var(--navy2);padding:32px 24px;text-align:center;transition:background .3s;position:relative}
+    .area-item::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
+    .area-item:hover{background:#0f1f3d}
+    .area-item:hover::before{transform:scaleX(1)}
+    .area-icon{font-size:2rem;margin-bottom:12px;display:block}
+    .area-item h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);margin-bottom:6px}
+    .area-item p{font-size:.78rem;color:var(--gray);line-height:1.6}
+
+    /* HIGHLIGHT BOX */
+    .highlight{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-radius:4px;padding:40px;margin-top:60px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .highlight h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--white);margin-bottom:12px}
+    .highlight h3 em{color:var(--gold);font-style:italic}
+    .highlight p{color:var(--gray);font-size:.92rem;line-height:1.8}
+    .highlight-right{text-align:center}
+    .highlight-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:var(--gold);line-height:1}
+    .highlight-label{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray);margin-top:4px}
+
+    /* FAQ */
+    .faq-section{padding:100px 40px;background:var(--navy2)}
+    .faq-list{margin-top:48px}
+    .faq-item{border-bottom:1px solid rgba(201,168,76,.1)}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--white);gap:16px}
+    .faq-q .icon{color:var(--gold);font-size:1.4rem;transition:transform .3s;flex-shrink:0}
+    .faq-q.open .icon{transform:rotate(45deg)}
+    .faq-a{display:none;padding:0 0 24px;font-size:.92rem;color:var(--gray);line-height:1.85;max-width:760px}
+    .faq-a.open{display:block}
+
+    /* CTA */
+    .cta-final{padding:100px 40px;text-align:center;background:linear-gradient(135deg,#040d1c,#071022);border-top:1px solid rgba(201,168,76,.2)}
+    .cta-final h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:var(--white);margin-bottom:16px;line-height:1.1}
+    .cta-final h2 em{color:var(--gold);font-style:italic}
+    .cta-final p{color:var(--gray);font-size:1.05rem;margin-bottom:40px;max-width:560px;margin-left:auto;margin-right:auto}
+    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+    @media(max-width:900px){
+      .hero-inner,.how-grid,.dual-grid,.highlight{grid-template-columns:1fr;gap:40px}
+      .results-grid{grid-template-columns:repeat(2,1fr)}
+      .results-grid-wide{grid-template-columns:1fr}
+      .areas-grid{grid-template-columns:repeat(2,1fr)}
+      .stats-inner{grid-template-columns:repeat(2,1fr)}
+      .hero,.dual-section,.how-section,.resultados,.areas-section,.faq-section,.cta-final{padding:70px 20px}
+      .stats-bar{padding:24px 20px}
+      .dual-card{padding:40px 28px}
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!--
-    COLE O CONTEÚDO DO SEU INDEX.HTML ATUAL AQUI
-    (todo o conteúdo que fica dentro do <body> da landing page do Endolaser)
-  -->
-
-  <!-- PLACEHOLDER — remova este bloco após colar o conteúdo real -->
-  <div class="placeholder-notice">
-    <h2>Landing Page do Endolaser</h2>
-    <p>Cole aqui o conteúdo original do seu <code>index.html</code> atual (o que estava dentro do <code>&lt;body&gt;</code>).</p>
-    <p>O menu de navegação e o rodapé já são injetados automaticamente pelo <code>nav.js</code>.</p>
-    <p>Esta página ficará disponível em:<br><strong style="color: var(--gold)">www.drnilmarbispo.com.br/endolaser</strong></p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-eyebrow">ANI-HU · Estética Avançada · São Paulo</p>
+      <h1>Redução de gordura<br>e fim da <em>flacidez</em><br>sem cirurgia</h1>
+      <p class="hero-sub">O Endolaser age diretamente no tecido adiposo com tecnologia laser de alta precisão — eliminando gordura localizada e firmando a pele em uma única sessão. Resultado visível desde o primeiro atendimento.</p>
+      <div class="hero-badges">
+        <span class="badge">Sem bisturi</span>
+        <span class="badge">Alta local</span>
+        <span class="badge">1ª sessão com resultado</span>
+        <span class="badge">Pele mais firme</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://wa.me/5511966504825?text=Olá!+Vi+sobre+o+Endolaser+e+quero+agendar+minha+avaliação+gratuita." target="_blank" class="btn-primary">Agendar Avaliação Gratuita</a>
+        <a href="#resultados" class="btn-outline">Ver Resultados Reais</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="/img/resultados/resultado6.jpg" alt="Resultado Endolaser - Redução de gordura abdominal">
+      <div class="hero-img-tag">
+        <strong>1ª</strong>
+        <span>sessão com<br>resultado</span>
+      </div>
+    </div>
   </div>
-  <!-- FIM DO PLACEHOLDER -->
+</section>
 
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><span class="stat-num">16+</span><span class="stat-label">Anos de Experiência</span></div>
+    <div class="stat-item"><span class="stat-num">98%</span><span class="stat-label">Satisfação dos Pacientes</span></div>
+    <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">Unidades em SP</span></div>
+    <div class="stat-item"><span class="stat-num">1ª</span><span class="stat-label">Sessão com Resultado</span></div>
+  </div>
+</div>
+
+<!-- GORDURA + FLACIDEZ -->
+<section class="dual-section">
+  <div class="dual-inner">
+    <p class="section-eyebrow">O que o Endolaser trata</p>
+    <h2 class="section-title">Dois problemas.<br>Uma solução precisa.</h2>
+
+    <div class="dual-grid">
+      <div class="dual-card dual-card-gordura">
+        <div class="dual-num">01</div>
+        <h2>Redução de<br><em>gordura localizada</em></h2>
+        <p>A gordura localizada é uma das queixas mais comuns — e uma das mais difíceis de eliminar só com dieta e exercício. Isso acontece porque as células de gordura (adipócitos) em certas regiões são geneticamente resistentes à mobilização metabólica.</p>
+        <p>O Endolaser age diretamente nessas células com energia laser de alta precisão, rompendo sua membrana e eliminando o conteúdo lipídico de forma controlada e segura. O resultado é uma <strong style="color:var(--text)">redução real de volume e definição do contorno corporal</strong> — sem as limitações da dieta e sem os riscos de uma cirurgia convencional.</p>
+        <ul class="dual-list">
+          <li>Destruição definitiva das células de gordura tratadas</li>
+          <li>Redução de volume visível desde a 1ª sessão</li>
+          <li>Precisão de contorno impossível por métodos não-invasivos</li>
+          <li>Resultado permanente com manutenção do peso</li>
+          <li>Atua em abdômen, flancos, costas, papada, coxas e braços</li>
+        </ul>
+      </div>
+
+      <div class="dual-card dual-card-flacidez">
+        <div class="dual-num">02</div>
+        <h2>Diminuição da<br><em>flacidez cutânea</em></h2>
+        <p>A flacidez é causada pela perda de colágeno e elastina — proteínas responsáveis pela firmeza e sustentação da pele. Com o envelhecimento, variações de peso ou pós-parto, a pele perde progressivamente sua capacidade de se "reestruturar" naturalmente.</p>
+        <p>O Endolaser vai além da simples remoção de gordura: o calor gerado pelo laser estimula a <strong style="color:var(--text)">retração imediata das fibras de colágeno</strong> e ativa fibroblastos para produção de novo colágeno nas semanas seguintes. A pele fica progressivamente mais firme, densa e com textura melhorada.</p>
+        <ul class="dual-list">
+          <li>Retração imediata das fibras de colágeno durante o procedimento</li>
+          <li>Estímulo à neocolagênese nas semanas seguintes</li>
+          <li>Pele mais firme, densa e com textura melhorada</li>
+          <li>Efeito lifting sem cirurgia plástica</li>
+          <li>Resultado progressivo por até 6 meses após a sessão</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <div>
+        <h3>Por que o Endolaser é<br><em>diferente de tudo</em>?</h3>
+        <p>Enquanto tratamentos não-invasivos (criolipólise, ultrassom, radiofrequência) agem de fora para dentro com resultados limitados, o Endolaser age <strong style="color:var(--text)">diretamente no tecido</strong> — com controle total da profundidade, temperatura e intensidade. É a única tecnologia que trata gordura e flacidez simultaneamente, em uma única sessão, com resultado imediato e progressivo.</p>
+      </div>
+      <div class="highlight-right">
+        <div class="highlight-num">2 em 1</div>
+        <div class="highlight-label">Gordura + Flacidez<br>em uma única sessão</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="how-section">
+  <div class="section-inner">
+    <div class="how-grid">
+      <div class="how-img">
+        <img src="/img/resultados/resultado7.jpg" alt="Procedimento Endolaser">
+      </div>
+      <div>
+        <p class="section-eyebrow">Como é feito</p>
+        <h2 class="section-title">O procedimento<br>passo a passo</h2>
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-num">01</div>
+            <div class="step-text">
+              <h4>Avaliação e marcação</h4>
+              <p>Análise das áreas de gordura e flacidez, marcações precisas na pele para guiar o tratamento com máxima precisão.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">02</div>
+            <div class="step-text">
+              <h4>Anestesia local tumescente</h4>
+              <p>Solução anestésica injetada no local. Você fica acordado, confortável e sem dor durante todo o procedimento.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">03</div>
+            <div class="step-text">
+              <h4>Aplicação do laser</h4>
+              <p>Fibra óptica de laser introduzida por microincisões milimétricos. O laser rompe as células de gordura e retrai o colágeno simultaneamente.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">04</div>
+            <div class="step-text">
+              <h4>Aspiração e alta</h4>
+              <p>Gordura liquefeita aspirada suavemente. Alta no mesmo dia. Resultado visível já nas primeiras 24-48 horas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="resultados" id="resultados">
+  <div class="section-inner">
+    <p class="section-eyebrow">Resultados reais · Pacientes reais</p>
+    <h2 class="section-title">Antes & Depois</h2>
+    <p class="section-sub">Casos reais tratados por Nilmar Bispo. Redução de gordura e firmeza visíveis desde a 1ª sessão.</p>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <img src="/img/resultados/resultado1.jpg" alt="Resultado Endolaser abdômen">
+        <div class="result-overlay"></div>
+        <div class="result-label">
+          <p class="result-tag">Abdômen · Antes & Depois</p>
+          <p class="result-desc">Redução de gordura abdominal e definição do contorno</p>
+        </div>
+      </div>
+      <div class="result-card">
+        <img src="/img/resultados/resultado2.jpg" alt="Resultado Endolaser flacidez">
+        <div class="result-overlay"></div>
+        <div class="result-label">
+          <p class="result-tag">Abdômen · Antes & Depois</p>
+          <p class="result-desc">Diminuição da gordura e firmeza da pele abdominal</p>
+        </div>
+      </div>
+      <div class="result-card">
+        <img src="/img/resultados/resultado4.jpg" alt="Resultado Endolaser gordura">
+        <div class="result-overlay"></div>
+        <div class="result-label">
+          <p class="result-tag">Flancos · Antes & Depois</p>
+          <p class="result-desc">Eliminação de gordura lateral e contorno definido</p>
+        </div>
+      </div>
+      <div class="result-card">
+        <img src="/img/resultados/resultado8.jpg" alt="Resultado Endolaser masculino">
+        <div class="result-overlay"></div>
+        <div class="result-label">
+          <p class="result-tag">Masculino · Antes & Depois</p>
+          <p class="result-desc">Definição abdominal masculina com Endolaser</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-grid-wide">
+      <div class="result-card result-card-wide">
+        <img src="/img/resultados/resultado5.jpg" alt="Resultado Endolaser redução flacidez">
+        <div class="result-overlay"></div>
+        <div class="result-label">
+          <p class="result-tag">Abdômen · Redução de gordura e flacidez</p>
+          <p class="result-desc">Caso com gordura localizada e flacidez — resultado em uma sessão</p>
+        </div>
+      </div>
+      <div class="result-card result-card-wide">
+        <img src="/img/resultados/resultado6.jpg" alt="Resultado Endolaser corpo completo">
+        <div class="result-overlay"></div>
+        <div class="result-label">
+          <p class="result-tag">Corpo completo · Antes & Depois</p>
+          <p class="result-desc">Harmonização corporal completa com Endolaser</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÁREAS -->
+<section class="areas-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Onde tratamos</p>
+    <h2 class="section-title">Áreas de tratamento</h2>
+    <p class="section-sub">O Endolaser age com precisão em qualquer região do corpo com gordura localizada ou flacidez.</p>
+    <div class="areas-grid">
+      <div class="area-item"><span class="area-icon">🎯</span><h4>Abdômen</h4><p>Barriga, flancos e região lombar</p></div>
+      <div class="area-item"><span class="area-icon">💪</span><h4>Braços</h4><p>Face interna e posterior dos braços</p></div>
+      <div class="area-item"><span class="area-icon">🦵</span><h4>Coxas</h4><p>Interna, externa e anterior</p></div>
+      <div class="area-item"><span class="area-icon">🍑</span><h4>Glúteos</h4><p>Definição e lifting glúteo</p></div>
+      <div class="area-item"><span class="area-icon">🔙</span><h4>Costas</h4><p>Dorsais e gordura nas costas</p></div>
+      <div class="area-item"><span class="area-icon">😊</span><h4>Papada</h4><p>Contorno de mandíbula e pescoço</p></div>
+      <div class="area-item"><span class="area-icon">🦿</span><h4>Joelhos</h4><p>Gordura ao redor dos joelhos</p></div>
+      <div class="area-item"><span class="area-icon">✨</span><h4>Outras áreas</h4><p>Consulte na avaliação gratuita</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Dúvidas frequentes</p>
+    <h2 class="section-title">Perguntas sobre o Endolaser</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">O Endolaser realmente reduz gordura e flacidez ao mesmo tempo? <span class="icon">+</span></button>
+        <div class="faq-a">Sim. Essa é a grande vantagem do Endolaser sobre outros tratamentos. O laser age em duas frentes simultaneamente: rompe as células de gordura (eliminando volume) e aquece as fibras de colágeno (promovendo retração e firmeza da pele). Outros métodos tratam um problema por vez — o Endolaser resolve os dois em uma única sessão.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Em quanto tempo vejo o resultado? <span class="icon">+</span></button>
+        <div class="faq-a">A redução de volume é visível já nas primeiras 24 a 48 horas. A firmeza da pele melhora progressivamente ao longo de 1 a 6 meses, conforme o novo colágeno é produzido. O resultado final é alcançado entre 3 e 6 meses após o procedimento.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">O resultado é permanente? <span class="icon">+</span></button>
+        <div class="faq-a">As células de gordura destruídas pelo laser não se regeneram — portanto, a redução de volume é permanente desde que o peso seja mantido. A firmeza da pele também é duradoura, pois o colágeno produzido permanece por anos. Ganhos significativos de peso podem criar novas células em outras regiões, mas a área tratada mantém o resultado.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Dói? Como é a recuperação? <span class="icon">+</span></button>
+        <div class="faq-a">O procedimento é feito com anestesia local tumescente — você fica confortável e sem dor durante todo o processo. Após, pode haver sensação de ardência e inchaço por alguns dias, além de uso de cinto compressivo por 2 a 4 semanas. Retorno às atividades leves em 2 a 3 dias e atividades físicas após 15 a 20 dias.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Quantas sessões são necessárias? <span class="icon">+</span></button>
+        <div class="faq-a">Na maioria dos casos, uma única sessão já traz resultados expressivos. Em áreas maiores ou com maior quantidade de gordura, pode ser indicado um segundo procedimento após 3 a 6 meses. Isso é avaliado individualmente na consulta.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Qual a diferença para a lipoaspiração tradicional? <span class="icon">+</span></button>
+        <div class="faq-a">A lipoaspiração tradicional exige anestesia geral, internação, maior tempo de recuperação e não trata a flacidez. O Endolaser é feito com anestesia local, sem internação, recuperação muito mais rápida e — diferencial fundamental — trata gordura e flacidez simultaneamente, com maior precisão de contorno.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>Chega de gordura que<br>não vai embora e pele <em>flácida</em></h2>
+  <p>Agende sua avaliação gratuita e descubra se o Endolaser é indicado para você. Sem compromisso, sem pressão.</p>
+  <div class="cta-actions">
+    <a href="https://wa.me/5511966504825?text=Olá!+Vi+sobre+o+Endolaser+e+quero+agendar+minha+avaliação+gratuita." target="_blank" class="btn-primary">Quero Agendar Agora</a>
+    <a href="https://wa.me/5511966504825?text=Olá!+Tenho+dúvidas+sobre+o+Endolaser.+Pode+me+ajudar?" target="_blank" class="btn-outline">Tirar Dúvidas</a>
+  </div>
+</section>
+
+<script>
+  function toggleFaq(btn){
+    const a=btn.nextElementSibling;const open=btn.classList.contains('open');
+    document.querySelectorAll('.faq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});
+    if(!open){btn.classList.add('open');a.classList.add('open');}
+  }
+</script>
 </body>
 </html>
