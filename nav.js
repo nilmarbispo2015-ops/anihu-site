@@ -184,4 +184,37 @@
 
   // Push body content down for fixed nav
   document.body.style.paddingTop = '70px';
+
+  // ── Google Analytics 4 ──
+  (function () {
+    const GA_ID = 'G-LKSDMBQ2SG';
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+
+    // ── Rastreamento de cliques nos botões de contato ──
+    document.addEventListener('click', function (e) {
+      const a = e.target.closest('a');
+      if (!a || !a.href) return;
+      const href = a.href.toLowerCase();
+      const txt = (a.textContent || '').trim().toLowerCase();
+      if (href.includes('wa.me') || href.includes('whatsapp')) {
+        const isAgendar = txt.includes('agendar') || a.classList.contains('nav-cta');
+        gtag('event', isAgendar ? 'click_agendar' : 'click_whatsapp', {
+          event_category: 'contato',
+          event_label: location.pathname
+        });
+      } else if (href.includes('instagram.com')) {
+        gtag('event', 'click_instagram', {
+          event_category: 'contato',
+          event_label: location.pathname
+        });
+      }
+    });
+  })();
 })();
